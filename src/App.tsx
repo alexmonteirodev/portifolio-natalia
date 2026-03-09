@@ -1,8 +1,9 @@
 import ButtonCta from "./components/ButtonCta";
 import Natalia from "./assets/jpg/nataliaPerfil.jpg";
+import mimoProject from "./assets/png/mimo/mimoProject.png";
+import lumioProject from "./assets/png/lumio/lumioProject.png";
+import doryProject from "./assets/png/dory/doryProject.png";
 import ProjectCard from "./components/ProjectCard";
-import mimoProject from "./assets/png/mimoProject.png";
-import lumioProject from "./assets/png/lumioProject.png";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
         </section>
 
         {/* PROJECTS */}
-        <section className="flex flex-col items-center justify-between border border-[#F1F1F0] rounded-3xl py-16 px-10 bg-white/85">
+        <section className="flex flex-col items-center justify-between border border-[#F1F1F0] rounded-3xl pt-16 px-10 bg-white/85">
           <h2 className="text-[#9B9893] self-start">PROJECTS</h2>
           <div className="flex flex-row gap-5 p-10 ">
             <ProjectCard
@@ -50,7 +51,7 @@ function App() {
               name={"Dory"}
               label={"App mobile · 2025"}
               link={""}
-              img={""}
+              img={doryProject}
             />
           </div>
         </section>
