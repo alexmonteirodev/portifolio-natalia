@@ -1,7 +1,8 @@
 import ButtonCta from "./components/ButtonCta";
 import Natalia from "./assets/jpg/nataliaPerfil.jpg";
 import ProjectCard from "./components/ProjectCard";
-import mimoProject from "./assets/png/mimo/mimoProject.png";
+import mimoProject from "./assets/png/mimoProject.png";
+import lumioProject from "./assets/png/lumioProject.png";
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
               name={"Lumio"}
               label={"Design System app mobile · 2025"}
               link={""}
-              img={""}
+              img={lumioProject}
             />
             <ProjectCard
               name={"Dory"}
