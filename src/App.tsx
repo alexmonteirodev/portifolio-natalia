@@ -7,6 +7,12 @@ import ProjectCard from "./components/ProjectCard";
 import ToolsMap from "./components/ToolsMap";
 import madrid from "./assets/jpg/pictures/madrid.jpg";
 import madridMap from "./assets/jpg/pictures/madridMap.jpg";
+import project1 from "./assets/png/projects/group1.png";
+import project2 from "./assets/png/projects/group2.png";
+import project3 from "./assets/png/projects/group3.png";
+import project4 from "./assets/png/projects/group4.png";
+import project5 from "./assets/png/projects/group5.png";
+import project6 from "./assets/png/projects/group6.png";
 
 const skills = [
   {
@@ -83,7 +89,7 @@ const tools = [
 
 const contact = [
   {
-    social: "linkedin",
+    social: "Linkedin",
     link: "",
   },
   {
@@ -104,6 +110,33 @@ const contact = [
   },
 ];
 
+const projects = [
+  {
+    name: "project 1",
+    img: project1,
+  },
+  {
+    name: "project 2",
+    img: project2,
+  },
+  {
+    name: "project 3",
+    img: project3,
+  },
+  {
+    name: "project 4",
+    img: project4,
+  },
+  {
+    name: "project 5",
+    img: project5,
+  },
+  {
+    name: "project 6",
+    img: project6,
+  },
+];
+
 function App() {
   return (
     <>
@@ -115,7 +148,7 @@ function App() {
               <h1 className="text-3xl md:text-5xl text-center md:text-left">
                 I'm Natalia Lopes
               </h1>
-              <p className="text-[#6B6760] text-lg md:text-2xl font-light w-full md:w-[60%] text-center md:text-left">
+              <p className="text-[#6B6760] text-lg md:text-2xl font-light w-full md:w-[60%] text-center md:text-left text-balance">
                 Junior Product Designer with real product experience. I
                 co-founded Land, where I help build apps from scratch — from the
                 first idea to the last interface detail. I'm naturally curious:
@@ -206,13 +239,21 @@ function App() {
                   alt=""
                   className="h-48 md:h-80 w-full sm:w-1/2 object-cover rounded-3xl"
                 />
-                <div>
+                <div className="relative">
                   <img
                     src={madridMap}
                     alt=""
-                    className="h-48 md:h-80 w-full sm:w-1/2 object-cover rounded-3xl relative"
+                    // className="h-48 md:h-80 w-full sm:w-1/2 object-cover rounded-3xl "
+                    className="rounded-3xl h-80 w-auto"
                   />
-                  <div className="absolute h-4 w-4 bg-blue-600 rounded-full border-2 border-white"></div>
+                  <div className="absolute top-50 right-42 h-4 w-4 bg-blue-600 rounded-full border-2 border-white ">
+                    <span className="relative flex size-3">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600 opacity-75"></span>
+                    </span>
+                  </div>
+                  <div className="bg-white border border-black/5 px-4 py-2 rounded-3xl absolute bottom-2 right-30">
+                    <p className="text-black text-sm">Madrid, Spain</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -221,26 +262,13 @@ function App() {
 
         {/* EXPLORATIONS */}
         <section className="flex flex-col items-center border border-[#F1F1F0] rounded-3xl pt-10 md:pt-16 px-6 md:px-10 pb-10 bg-white/85 w-full">
-          <h2 className="text-[#9B9893] self-start mb-6">EXPLORATIONS</h2>
-          <div className="flex flex-col sm:flex-row gap-5 w-full">
-            <ProjectCard
-              name={"Mimo"}
-              label={"App mobile · 2025"}
-              link={""}
-              img={mimoProject}
-            />
-            <ProjectCard
-              name={"Lumio"}
-              label={"Design System app mobile · 2025"}
-              link={""}
-              img={lumioProject}
-            />
-            <ProjectCard
-              name={"Dory"}
-              label={"App mobile · 2025"}
-              link={""}
-              img={doryProject}
-            />
+          <h2 className="text-[#9B9893] self-start pb-6 md:pb-9">
+            EXPLORATIONS
+          </h2>
+          <div className="flex flex-wrap items-center justify-center gap-5">
+            {projects.map((item, i) => (
+              <img key={i} src={item.img} alt="" className="h-69 w-auto" />
+            ))}
           </div>
         </section>
 
@@ -257,7 +285,7 @@ function App() {
               <a
                 key={i}
                 href={item.link}
-                className="text-[16px] text-[#C4C1BC]"
+                className="text-[16px] text-[#C4C1BC] hover:text-black/50 transition-transform"
               >
                 {item.social === "division" ? "·" : item.social}
               </a>
