@@ -145,10 +145,10 @@ function App() {
         <section className="flex flex-col md:flex-row items-center justify-between border border-[#F1F1F0] rounded-3xl py-10 md:py-16 px-6 md:px-10 bg-white/85 w-full gap-8">
           <div className="flex flex-col gap-6 md:gap-8 order-2 md:order-1">
             <div className="flex flex-col gap-3 md:gap-4">
-              <h1 className="text-3xl md:text-5xl text-center md:text-left">
+              <h1 className="text-3xl md:text-5xl text-center md:text-left ">
                 I'm Natalia Lopes
               </h1>
-              <p className="text-[#6B6760] text-lg md:text-2xl font-light w-full md:w-[60%] text-center md:text-left text-balance">
+              <p className="text-[#6B6760] text-lg md:text-2xl font-light w-full md:w-[60%] text-center md:text-left text-balance ">
                 Junior Product Designer with real product experience. I
                 co-founded Land, where I help build apps from scratch — from the
                 first idea to the last interface detail. I'm naturally curious:
@@ -244,14 +244,14 @@ function App() {
                     src={madridMap}
                     alt=""
                     // className="h-48 md:h-80 w-full sm:w-1/2 object-cover rounded-3xl "
-                    className="rounded-3xl h-80 w-auto"
+                    className="rounded-3xl h-48 md:h-80 w-full object-cover"
                   />
-                  <div className="absolute top-50 right-42 h-4 w-4 bg-blue-600 rounded-full border-2 border-white ">
+                  <div className="absolute top-30 right-28 md:top-50 md:right-42 h-4 w-4 bg-blue-600 rounded-full border-2 border-white ">
                     <span className="relative flex size-3">
                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600 opacity-75"></span>
                     </span>
                   </div>
-                  <div className="bg-white border border-black/5 px-4 py-2 rounded-3xl absolute bottom-2 right-30">
+                  <div className="bg-white border border-black/5 px-4 py-2 rounded-3xl absolute bottom-2 md:right-30 right-40">
                     <p className="text-black text-sm">Madrid, Spain</p>
                   </div>
                 </div>
