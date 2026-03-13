@@ -13,26 +13,42 @@ import project3 from "./assets/png/projects/group3.png";
 import project4 from "./assets/png/projects/group4.png";
 import project5 from "./assets/png/projects/group5.png";
 import project6 from "./assets/png/projects/group6.png";
+import behance from "./assets/svg/behance.svg";
+import claude from "./assets/svg/claude.svg";
+import clickup from "./assets/svg/clickup.svg";
+import loc from "./assets/svg/loc.svg";
+import dribbble from "./assets/svg/dribbble.svg";
+import figma from "./assets/svg/figma.svg";
+import framer from "./assets/svg/framer2.svg";
+import linkedin from "./assets/svg/linkedin.svg";
+import notion from "./assets/svg/notion.svg";
+import skill1 from "./assets/svg/skill1.svg";
+import skill2 from "./assets/svg/skil2.svg";
+import skill3 from "./assets/svg/skill3.svg";
+import skill4 from "./assets/svg/skill4.svg";
+import skill5 from "./assets/svg/skill5.svg";
+import x from "./assets/svg/x.svg";
+import headerBg from "./assets/svg/headerBg.svg";
 
 const skills = [
   {
-    icon: "",
+    icon: skill1,
     label: "UX/UI Design",
   },
   {
-    icon: "",
+    icon: skill2,
     label: "User Research",
   },
   {
-    icon: "",
+    icon: skill3,
     label: "User Flow",
   },
   {
-    icon: "",
+    icon: skill4,
     label: "Design System",
   },
   {
-    icon: "",
+    icon: skill5,
     label: "Prototyping",
   },
 ];
@@ -40,49 +56,53 @@ const skills = [
 const social = [
   {
     name: "linkedin",
-    icon: "",
+    icon: linkedin,
     bgColor: "#E5F3FF",
+    link: "https://www.linkedin.com/in/nat%C3%A1lia-lopes-855711192/",
   },
   {
     name: "dribble",
-    icon: "",
+    icon: dribbble,
     bgColor: "#FFECF1",
+    link: "https://dribbble.com/nataliamja",
   },
   {
     name: "behance",
-    icon: "",
+    icon: behance,
     bgColor: "#EAF5FF",
+    link: "https://www.behance.net/nataliamja",
   },
   {
     name: "twitter",
-    icon: "",
+    icon: x,
     bgColor: "#F3F3F3",
+    link: "https://x.com/anataliamja",
   },
 ];
 const tools = [
   {
     name: "figma",
-    icon: "",
+    icon: figma,
     bgColor: "#F9F3FF",
   },
   {
     name: "framer",
-    icon: "",
+    icon: framer,
     bgColor: "#E8F8FF",
   },
   {
-    name: "slack",
-    icon: "",
-    bgColor: "#FFF6E1",
+    name: "clickup",
+    icon: clickup,
+    bgColor: "#FFEDF5",
   },
   {
     name: "notion",
-    icon: "",
+    icon: notion,
     bgColor: "#F3F3F3",
   },
   {
     name: "claude",
-    icon: "",
+    icon: claude,
     bgColor: "#FFF2EE",
   },
 ];
@@ -90,7 +110,7 @@ const tools = [
 const contact = [
   {
     social: "Linkedin",
-    link: "",
+    link: "https://www.linkedin.com/in/nat%C3%A1lia-lopes-855711192/",
   },
   {
     social: "division",
@@ -98,7 +118,7 @@ const contact = [
   },
   {
     social: "Dribbble",
-    link: "",
+    link: "https://dribbble.com/nataliamja",
   },
   {
     social: "division",
@@ -106,7 +126,7 @@ const contact = [
   },
   {
     social: "Twitter",
-    link: "",
+    link: "https://x.com/anataliamja",
   },
 ];
 
@@ -142,7 +162,7 @@ function App() {
     <>
       <div className="p-4 md:p-8 flex flex-col items-center justify-center gap-6 md:gap-8">
         {/* section 1 - Hero */}
-        <section className="flex flex-col md:flex-row items-center justify-between border border-[#F1F1F0] rounded-3xl py-10 md:py-16 px-6 md:px-10 bg-white/85 w-full gap-8">
+        <section className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between border border-[#F1F1F0] rounded-3xl py-10 md:py-16 px-6 md:px-10 bg-white/85 w-full gap-8">
           <div className="flex flex-col gap-6 md:gap-8 order-2 md:order-1">
             <div className="flex flex-col gap-3 md:gap-4">
               <h1 className="text-3xl md:text-5xl text-center md:text-left ">
@@ -163,7 +183,12 @@ function App() {
           <img
             src={Natalia}
             alt=""
-            className="h-48 w-48 md:h-72 md:w-72 rounded-full object-cover border-8 border-[#F1F1F1CC] order-1 md:order-2 shrink-0"
+            className="h-48 w-48 md:h-72 md:w-72 rounded-full object-cover border-8 border-[#F1F1F1CC] order-1 md:order-2 shrink-0 z-10"
+          />
+          <img
+            src={headerBg}
+            alt=""
+            className="absolute -right-8 md:right-13 md:top-6 -top-10 z-0"
           />
         </section>
 
@@ -218,8 +243,12 @@ function App() {
                     key={i}
                     className="flex flex-row gap-5 items-center pb-5 md:pb-6"
                   >
-                    <div className="bg-[#FFECF1] p-3 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <img src="" alt="skillIcon.svg" className="h-6 w-6" />
+                    <div className="bg-[#FFECF1] p-3 rounded-2xl flex items-center justify-center shrink-0">
+                      <img
+                        src={item.icon}
+                        alt="skillIcon.svg"
+                        className="h-6 w-6"
+                      />
                     </div>
                     <p className="text-lg md:text-xl">{item.label}</p>
                   </div>
@@ -230,7 +259,7 @@ function App() {
             {/* Right column */}
             <div className="flex flex-col gap-6 md:gap-8 flex-1">
               <div className="flex flex-col gap-10 md:gap-14 border border-[#F1F1F0] rounded-3xl p-8 md:p-10 bg-white/85">
-                <ToolsMap arr={social} title={"SOCIAL"} />
+                <ToolsMap arr={social} title={"SOCIAL"} activeLink={true} />
                 <ToolsMap arr={tools} title={"FAVORITE TOOLS"} />
               </div>
               <div className="flex flex-col sm:flex-row gap-4 md:gap-8">
@@ -251,7 +280,8 @@ function App() {
                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600 opacity-75"></span>
                     </span>
                   </div>
-                  <div className="bg-white border border-black/5 px-4 py-2 rounded-3xl absolute bottom-2 md:right-30 right-40">
+                  <div className="bg-white border border-black/5 px-4 py-2 rounded-3xl absolute bottom-2 md:right-30 right-40 flex items-center justify-center gap-2">
+                    <img src={loc} alt="" />
                     <p className="text-black text-sm">Madrid, Spain</p>
                   </div>
                 </div>
@@ -286,6 +316,7 @@ function App() {
                 key={i}
                 href={item.link}
                 className="text-[16px] text-[#C4C1BC] hover:text-black/50 transition-transform"
+                target="blank"
               >
                 {item.social === "division" ? "·" : item.social}
               </a>
