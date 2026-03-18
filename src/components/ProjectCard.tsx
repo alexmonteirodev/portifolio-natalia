@@ -8,7 +8,7 @@ type Card = {
 function ProjectCard({ name, label, link, img }: Card) {
   return (
     <div className="flex flex-col items-center gap-7 border border-[#F1F1F0] px-8 pt-10 rounded-3xl h-120 overflow-hidden ">
-      <div className="flex flex-row items-center gap-44">
+      <div className="flex flex-row items-center w-full justify-between">
         <div>
           <p className="text-2xl">{name}</p>
           <p className="text-[16px] text-[#6b6760] whitespace-nowrap">

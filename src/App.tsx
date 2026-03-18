@@ -195,7 +195,7 @@ function App() {
         {/* PROJECTS */}
         <section className="flex flex-col items-center border border-[#F1F1F0] rounded-3xl pt-10 md:pt-16 px-6 md:px-10 pb-10 bg-white/85 w-full">
           <h2 className="text-[#9B9893] self-start mb-6">PROJECTS</h2>
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-5 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 w-full">
             <ProjectCard
               name={"Mimo"}
               label={"App mobile · 2025"}
