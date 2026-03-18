@@ -195,7 +195,7 @@ function App() {
         {/* PROJECTS */}
         <section className="flex flex-col items-center border border-[#F1F1F0] rounded-3xl pt-10 md:pt-16 px-6 md:px-10 pb-10 bg-white/85 w-full">
           <h2 className="text-[#9B9893] self-start mb-6">PROJECTS</h2>
-          <div className="flex flex-col sm:flex-row gap-5 w-full">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-5 w-full">
             <ProjectCard
               name={"Mimo"}
               label={"App mobile · 2025"}
@@ -268,19 +268,17 @@ function App() {
                   alt=""
                   className="h-48 md:h-80 w-full sm:w-1/2 object-cover rounded-3xl"
                 />
-                <div className="relative">
+                <div className="relative w-full sm:w-1/2">
                   <img
                     src={madridMap}
-                    alt=""
-                    // className="h-48 md:h-80 w-full sm:w-1/2 object-cover rounded-3xl "
                     className="rounded-3xl h-48 md:h-80 w-full object-cover"
                   />
-                  <div className="absolute top-30 right-28 md:top-50 md:right-42 h-4 w-4 bg-blue-600 rounded-full border-2 border-white ">
+                  <div className="absolute top-[55%] left-[48%] h-4 w-4 bg-blue-600 rounded-full border-2 border-white">
                     <span className="relative flex size-3">
                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600 opacity-75"></span>
                     </span>
                   </div>
-                  <div className="bg-white border border-black/5 px-4 py-2 rounded-3xl absolute bottom-2 md:right-30 right-40 flex items-center justify-center gap-2">
+                  <div className="bg-white border border-black/5 px-4 py-2 rounded-3xl absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 whitespace-nowrap">
                     <img src={loc} alt="" />
                     <p className="text-black text-sm">Madrid, Spain</p>
                   </div>
@@ -297,7 +295,12 @@ function App() {
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-5">
             {projects.map((item, i) => (
-              <img key={i} src={item.img} alt="" className="h-69 w-auto" />
+              <img
+                key={i}
+                src={item.img}
+                alt=""
+                className="h-48 md:h-64 w-auto"
+              />
             ))}
           </div>
         </section>
