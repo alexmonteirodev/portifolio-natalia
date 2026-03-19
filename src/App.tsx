@@ -204,7 +204,7 @@ function App() {
             />
             <ProjectCard
               name={"Lumio"}
-              label={"Design System app mobile · 2025"}
+              label={"App mobile · 2025"}
               link={""}
               img={lumioProject}
             />
