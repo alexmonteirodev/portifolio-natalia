@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import arrow from "../assets/svg/arrow.svg";
 type Card = {
   name: string;
@@ -15,12 +16,12 @@ function ProjectCard({ name, label, link, img }: Card) {
             {label}
           </p>
         </div>
-        <a
-          href={link}
+        <Link
+          to={link}
           className="bg-black w-8 h-8 rounded-full inline-flex items-center justify-center hover:scale-105 transition-transform"
         >
           <img src={arrow} alt="" className="h-3 w-3" />
-        </a>
+        </Link>
       </div>
 
       <div className="border-4 border-[#FF904B] rounded-[36px]">
