@@ -27,8 +27,10 @@ import skill2 from "../assets/svg/skil2.svg";
 import skill3 from "../assets/svg/skill3.svg";
 import skill4 from "../assets/svg/skill4.svg";
 import skill5 from "../assets/svg/skill5.svg";
+import skill6 from "../assets/svg/skill6.svg";
 import x from "../assets/svg/x.svg";
 import headerBg from "../assets/svg/headerBg.svg";
+import Coment from "../components/Coment";
 
 const skills = [
   {
@@ -50,6 +52,10 @@ const skills = [
   {
     icon: skill5,
     label: "Prototyping",
+  },
+  {
+    icon: skill6,
+    label: "Wireframing",
   },
 ];
 
@@ -168,16 +174,31 @@ function App() {
               <h1 className="text-3xl md:text-5xl text-center md:text-left ">
                 I'm Natalia Lopes
               </h1>
-              <p className="text-[#6B6760] text-lg md:text-2xl font-light w-full md:w-[60%] text-center md:text-left text-balance ">
-                Junior Product Designer with real product experience. I
-                co-founded Land, where I help build apps from scratch — from the
-                first idea to the last interface detail. I'm naturally curious:
-                I question flows, dig into user needs, and care about what
-                actually makes sense
-              </p>
+              <div className="text-[#6B6760] text-lg md:text-2xl font-light w-full md:w-[60%] text-center md:text-left text-balance flex flex-col gap-6">
+                <p>
+                  Junior Product Designer with real experience. I work at Land,
+                  where I help build digital products from scratch, from the
+                  first idea to the last interface detail.
+                </p>
+                <p>
+                  From Brazil, now based in Madrid. Curious by nature — I
+                  question flows, understand users, and care about what actually
+                  makes sense.
+                </p>
+                <p>
+                  I paint, travel, and photograph everything worth remembering.
+                </p>
+              </div>
             </div>
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start gap-4">
               <ButtonCta />
+              <a className="hover:cursor-pointer px-6 py-5 border border-black rounded-2xl inline-flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:bg-black group">
+                <img
+                  src={linkedin}
+                  alt="LinkedIn"
+                  className="w-6 h-6 brightness-0 transition duration-300 group-hover:invert"
+                />
+              </a>
             </div>
           </div>
           <img
@@ -217,27 +238,25 @@ function App() {
           </div>
         </section>
 
-        {/* RECENT WORK */}
         <section className="w-full rounded-3xl bg-white/85">
-          <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
-            {/* Left card */}
-            <div className="p-8 md:p-10 border border-[#F1F1F0] rounded-3xl bg-white/85 flex flex-col gap-8 md:gap-10 w-full lg:w-[45%]">
-              <div>
-                <h2 className="text-[#9B9893] self-start pb-6 md:pb-9">
-                  RECENT WORK
-                </h2>
-                <div className="flex flex-col gap-2">
-                  <h1 className="text-2xl md:text-3xl">Product Design</h1>
-                  <p className="text-[#9B9893] text-lg md:text-xl">
-                    2025 - Currently
-                  </p>
-                </div>
+          <div className="p-8 md:p-10 border border-[#F1F1F0] rounded-3xl bg-white/85 flex flex-row gap-8 md:gap-10">
+            <div className="w-[45%]">
+              <h2 className="text-[#9B9893] self-start pb-6 md:pb-9">
+                RECENT WORK
+              </h2>
+              <div className="flex flex-col gap-2">
+                <h1 className="text-2xl md:text-3xl">
+                  Product Designer at LAND
+                </h1>
+                <p className="text-[#9B9893] text-lg md:text-xl">
+                  2025 - Currently
+                </p>
               </div>
-              <hr className="text-[#C4C1BC]" />
-              <div>
-                <h2 className="text-[#9B9893] self-start pb-6 md:pb-8">
-                  SKILLS
-                </h2>
+            </div>
+            <div className="bg-[#F1F1F0] w-0.5"></div>
+            <div className="px-20">
+              <h2 className="text-[#9B9893] self-start pb-6 md:pb-8">SKILLS</h2>
+              <div className="flex flex-row flex-wrap gap-8 ">
                 {skills.map((item, i) => (
                   <div
                     key={i}
@@ -253,6 +272,55 @@ function App() {
                     <p className="text-lg md:text-xl">{item.label}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* EXPLORATIONS */}
+        <section className="flex flex-col items-center border border-[#F1F1F0] rounded-3xl pt-10 md:pt-16 px-6 md:px-10 pb-10 bg-white/85 w-full">
+          <h2 className="text-[#9B9893] self-start pb-6 md:pb-9">
+            EXPLORATIONS
+          </h2>
+          <div className="flex flex-wrap items-center justify-center gap-5">
+            {projects.map((item, i) => (
+              <img
+                key={i}
+                src={item.img}
+                alt=""
+                className="h-48 md:h-64 w-auto"
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* RECENT WORK */}
+        <section className="w-full rounded-3xl bg-white/85">
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
+            {/* Left card */}
+            <div className="p-8 md:p-10 border border-[#F1F1F0] rounded-3xl bg-white/85 flex flex-col gap-8 md:gap-10 w-full lg:w-[45%]">
+              <div className="flex flex-col gap-8">
+                <h2 className="text-[#9B9893] self-start">KIND WORDS</h2>
+                <div className="flex flex-row gap-8">
+                  <Coment
+                    text="Creativity, sensitivity, and excellence in every detail... It was a pleasure working with her."
+                    link={""}
+                    linkLabel="Laura Magalhães"
+                    position="Senior Product Design"
+                  />
+                  <Coment
+                    text="Creativity, sensitivity, and excellence in every detail... It was a pleasure working with her."
+                    link={""}
+                    linkLabel="Alex Monteiro"
+                    position="Frontend Developer"
+                  />
+                </div>
+                <Coment
+                  text="Creativity, sensitivity, and excellence in every detail... It was a pleasure working with her."
+                  link={""}
+                  linkLabel="Dhiego Correa"
+                  position="Senior Product Design"
+                />
               </div>
             </div>
 
@@ -288,28 +356,20 @@ function App() {
           </div>
         </section>
 
-        {/* EXPLORATIONS */}
-        <section className="flex flex-col items-center border border-[#F1F1F0] rounded-3xl pt-10 md:pt-16 px-6 md:px-10 pb-10 bg-white/85 w-full">
-          <h2 className="text-[#9B9893] self-start pb-6 md:pb-9">
-            EXPLORATIONS
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-5">
-            {projects.map((item, i) => (
-              <img
-                key={i}
-                src={item.img}
-                alt=""
-                className="h-48 md:h-64 w-auto"
-              />
-            ))}
-          </div>
-        </section>
-
         {/* FOOTER */}
         <section className="flex flex-col items-center border border-[#F1F1F0] rounded-3xl pt-10 md:pt-16 px-6 md:px-10 pb-10 bg-white/85 w-full">
           <h1 className="text-3xl md:text-5xl text-center md:text-left">
             Open to new opportunities
           </h1>
+          <p className="text-xl text-[#9B9893] font-light pt-5">
+            Reach me at{" "}
+            <a
+              href="mailto:natalialopes.mja@gmail.com"
+              className="hover:text-[#D4315E]/80 transition-transform"
+            >
+              natalialopes.mja@gmail.com
+            </a>
+          </p>
           <div className="pt-6 pb-10">
             <ButtonCta />
           </div>
@@ -318,7 +378,7 @@ function App() {
               <a
                 key={i}
                 href={item.link}
-                className="text-[16px] text-[#C4C1BC] hover:text-black/50 transition-transform"
+                className="text-[16px] text-[#C4C1BC] hover:text-[#D4315E]/80 transition-transform"
                 target="blank"
               >
                 {item.social === "division" ? "·" : item.social}
