@@ -12,23 +12,21 @@ function ProjectCard({ name, label, link, img }: Card) {
       <div className="flex flex-row items-center w-full justify-between">
         <div>
           <p className="text-2xl">{name}</p>
-          <p className="text-[16px] text-[#6b6760] whitespace-nowrap">
-            {label}
-          </p>
+          <p className="text-[16px] text-[#9B9893]">{label}</p>
         </div>
         <Link
           to={link}
-          className="bg-black w-8 h-8 rounded-full inline-flex items-center justify-center hover:scale-105 transition-transform"
+          className="bg-black w-8 h-8 rounded-full inline-flex items-center justify-center hover:scale-105 transition-transform shrink-0"
         >
           <img src={arrow} alt="" className="h-3 w-3" />
         </Link>
       </div>
 
-      <div className="border-4 border-[#FF904B] rounded-[36px]">
+      <div className="border-4 border-[#FF904B] rounded-[42px]">
         <img
           src={img}
           alt=""
-          className="w-60 rounded-4xl border-4 border-black "
+          className="w-60 rounded-[38px] border-4 border-black "
         />
       </div>
     </div>

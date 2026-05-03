@@ -2,7 +2,7 @@ import ButtonCta from "../components/ButtonCta";
 import Natalia from "../assets/jpg/nataliaPerfil.jpg";
 import mimoProject from "../assets/png/mimo/mimoProject.png";
 import lumioProject from "../assets/png/lumio/lumioProject.png";
-import doryProject from "../assets/png/dory/doryProject.png";
+import movaProject from "../assets/png/mova/movaProject.png";
 import ProjectCard from "../components/ProjectCard";
 import ToolsMap from "../components/ToolsMap";
 import madrid from "../assets/jpg/pictures/madrid.jpg";
@@ -28,6 +28,13 @@ import skill3 from "../assets/svg/skill3.svg";
 import skill4 from "../assets/svg/skill4.svg";
 import skill5 from "../assets/svg/skill5.svg";
 import skill6 from "../assets/svg/skill6.svg";
+import Photography from "../assets/svg/Photography.svg";
+import Traveling from "../assets/svg/Traveling.svg";
+import Sporting from "../assets/svg/Sporting.svg";
+import Painting from "../assets/svg/Painting.svg";
+import Exploring from "../assets/svg/Exploring cities.svg";
+import Rewatching from "../assets/svg/Rewatching.svg";
+
 import x from "../assets/svg/x.svg";
 import headerBg from "../assets/svg/headerBg.svg";
 import Coment from "../components/Coment";
@@ -56,6 +63,33 @@ const skills = [
   {
     icon: skill6,
     label: "Wireframing",
+  },
+];
+
+const beyondthescreen = [
+  {
+    icon: Photography,
+    label: "UX/UI Design",
+  },
+  {
+    icon: Traveling,
+    label: "Traveling",
+  },
+  {
+    icon: Sporting,
+    label: "Sporting",
+  },
+  {
+    icon: Painting,
+    label: "Painting",
+  },
+  {
+    icon: Exploring,
+    label: "Exploring cities",
+  },
+  {
+    icon: Rewatching,
+    label: "Rewatching",
   },
 ];
 
@@ -218,22 +252,28 @@ function App() {
           <h2 className="text-[#9B9893] self-start mb-6">PROJECTS</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 w-full">
             <ProjectCard
+              name={"Mova"}
+              label={
+                "Helping personal trainers and clients connect with their best shape"
+              }
+              link={""}
+              img={movaProject}
+            />
+            <ProjectCard
               name={"Mimo"}
-              label={"App mobile · 2025"}
+              label={
+                "Never forget someone's birthday again and become the best gift giver ever"
+              }
               link={"/mimo"}
               img={mimoProject}
             />
             <ProjectCard
               name={"Lumio"}
-              label={"App mobile · 2025"}
+              label={
+                "Document your faith journey and feel closer to God than ever before"
+              }
               link={""}
               img={lumioProject}
-            />
-            <ProjectCard
-              name={"Dory"}
-              label={"App mobile · 2025"}
-              link={""}
-              img={doryProject}
             />
           </div>
         </section>
@@ -326,31 +366,64 @@ function App() {
 
             {/* Right column */}
             <div className="flex flex-col gap-6 md:gap-8 flex-1">
-              <div className="flex flex-col gap-10 md:gap-14 border border-[#F1F1F0] rounded-3xl p-8 md:p-10 bg-white/85">
-                <ToolsMap arr={social} title={"SOCIAL"} activeLink={true} />
-                <ToolsMap arr={tools} title={"FAVORITE TOOLS"} />
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-8">
-                <img
-                  src={madrid}
-                  alt=""
-                  className="h-48 md:h-80 w-full sm:w-1/2 object-cover rounded-3xl"
-                />
-                <div className="relative w-full sm:w-1/2">
-                  <img
-                    src={madridMap}
-                    className="rounded-3xl h-48 md:h-80 w-full object-cover"
-                  />
-                  <div className="absolute top-[55%] left-[48%] h-4 w-4 bg-blue-600 rounded-full border-2 border-white">
-                    <span className="relative flex size-3">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600 opacity-75"></span>
-                    </span>
-                  </div>
-                  <div className="bg-white border border-black/5 px-4 py-2 rounded-3xl absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 whitespace-nowrap">
-                    <img src={loc} alt="" />
-                    <p className="text-black text-sm">Madrid, Spain</p>
+              <div className="flex flex-col gap-10 md:gap-14 border border-[#F1F1F0] rounded-3xl p-8 md:p-10 bg-white/85 ">
+                <div>
+                  <h2 className="text-[#9B9893] self-start pb-6 md:pb-8">
+                    BEYOND THE SCREEN
+                  </h2>
+                  <div className="grid grid-cols-3 gap-8">
+                    {beyondthescreen.map((item, i) => (
+                      <div
+                        key={i}
+                        className="flex flex-row gap-5 items-center pb-5 md:pb-6"
+                      >
+                        <div className="bg-[#FFECF1] p-3 rounded-2xl flex items-center justify-center shrink-0">
+                          <img
+                            src={item.icon}
+                            alt="skillIcon.svg"
+                            className="h-6 w-6"
+                          />
+                        </div>
+                        <p className="text-lg md:text-xl">{item.label}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
+                <Coment
+                  text="Courage would be to look. Just look. Try. Dare to feel lost."
+                  link={""}
+                  linkLabel={false}
+                  position="— Clarice Lispector"
+                />
+                <div className="flex flex-col sm:flex-row gap-4 md:gap-8">
+                  <img
+                    src={madrid}
+                    alt=""
+                    className="w-36 h-32.5 object-cover rounded-3xl"
+                  />
+                  <img
+                    src={madrid}
+                    alt=""
+                    className="w-36 h-32.5 object-cover rounded-3xl"
+                  />
+                  <div className="relative w-full sm:w-1/2">
+                    <img
+                      src={madridMap}
+                      className="rounded-3xl h-32.5 w-full object-cover"
+                    />
+                    <div className="absolute top-[55%] left-[48%] h-4 w-4 bg-blue-600 rounded-full border-2 border-white">
+                      <span className="relative flex size-3">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600 opacity-75"></span>
+                      </span>
+                    </div>
+                    <div className="bg-white border border-black/5 px-4 py-2 rounded-3xl absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 whitespace-nowrap">
+                      <img src={loc} alt="" />
+                      <p className="text-black text-sm">Madrid, Spain</p>
+                    </div>
+                  </div>
+                </div>
+                {/* <ToolsMap arr={social} title={"SOCIAL"} activeLink={true} /> */}
+                <ToolsMap arr={tools} title={"FAVORITE TOOLS"} />
               </div>
             </div>
           </div>
