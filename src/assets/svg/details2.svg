@@ -1,0 +1,25 @@
+<svg width="392" height="337" viewBox="0 0 392 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="37.5205" y1="4.37114e-08" x2="37.5205" y2="392.02" stroke="#F2F2F2"/>
+<line x1="117.521" y1="4.37114e-08" x2="117.52" y2="392.02" stroke="#F2F2F2"/>
+<line x1="196.521" y1="4.37114e-08" x2="196.52" y2="392.02" stroke="#F2F2F2"/>
+<line x1="392.021" y1="101.521" x2="9.1509e-05" y2="101.52" stroke="#F2F2F2"/>
+<line x1="392.021" y1="188.521" x2="9.1509e-05" y2="188.52" stroke="#F2F2F2"/>
+<g filter="url(#filter0_f_170_551)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M196.521 173.021C196.552 181.57 203.479 188.492 212.021 188.492C203.46 188.492 196.521 195.444 196.521 204.021C196.49 195.471 189.562 188.549 181.021 188.549C189.581 188.549 196.521 181.597 196.521 173.021Z" fill="#DA5E7F"/>
+</g>
+<g filter="url(#filter1_f_170_551)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M117.521 86.0205C117.552 94.5704 124.479 101.492 133.021 101.492C124.46 101.492 117.521 108.444 117.521 117.021C117.49 108.471 110.562 101.549 102.021 101.549C110.581 101.549 117.521 94.5967 117.521 86.0205Z" fill="#DA5E7F"/>
+</g>
+<defs>
+<filter id="filter0_f_170_551" x="177.021" y="169.021" width="39" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_170_551"/>
+</filter>
+<filter id="filter1_f_170_551" x="98.0205" y="82.0205" width="39" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_170_551"/>
+</filter>
+</defs>
+</svg>

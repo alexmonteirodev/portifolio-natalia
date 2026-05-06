@@ -6,6 +6,7 @@ import movaProject from "../assets/png/mova/movaProject.png";
 import ProjectCard from "../components/ProjectCard";
 import ToolsMap from "../components/ToolsMap";
 import madrid from "../assets/jpg/pictures/madrid.jpg";
+import brasil from "../assets/jpg/pictures/brasil.jpg";
 import madridMap from "../assets/jpg/pictures/madridMap.jpg";
 import project1 from "../assets/png/projects/group1.png";
 import project2 from "../assets/png/projects/group2.png";
@@ -32,6 +33,10 @@ import Sporting from "../assets/svg/Sporting.svg";
 import Painting from "../assets/svg/Painting.svg";
 import Exploring from "../assets/svg/Exploring cities.svg";
 import Rewatching from "../assets/svg/Rewatching.svg";
+import details1 from "../assets/svg/details1.svg";
+import details2 from "../assets/svg/details2.svg";
+import headerDetail1 from "../assets/svg/headerdetail1.svg";
+import headerDetail2 from "../assets/svg/headerdetail2.svg";
 import headerBg from "../assets/svg/headerBg.svg";
 import Coment from "../components/Coment";
 
@@ -45,9 +50,9 @@ const skills = [
 ];
 
 const beyondthescreen = [
-  { icon: Photography, label: "Photography" },
-  { icon: Traveling, label: "Traveling" },
   { icon: Sporting, label: "Sporting" },
+  { icon: Traveling, label: "Traveling" },
+  { icon: Photography, label: "Photography" },
   { icon: Painting, label: "Painting" },
   { icon: Exploring, label: "Exploring cities" },
   { icon: Rewatching, label: "Rewatching" },
@@ -85,7 +90,7 @@ function App() {
   return (
     <div className="p-4 md:p-8 flex flex-col items-center gap-4 md:gap-5">
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-12 py-10 md:py-14 flex flex-col md:flex-row items-center justify-between gap-8">
+      <section className="relative overflow-hidden w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-12 py-10 md:py-14 flex flex-col md:flex-row items-center justify-between gap-8 ">
         {/* Text */}
         <div className="flex flex-col gap-6 order-2 md:order-1 z-10">
           <h1 className="text-4xl md:text-5xl text-center md:text-left">
@@ -121,19 +126,29 @@ function App() {
         </div>
 
         {/* Photo */}
-        <div className="order-1 md:order-2 shrink-0 z-10">
+        <div className="order-1 md:order-2 shrink-0 z-10 ">
           <img
             src={Natalia}
             alt="Natália Lopes"
-            className="h-52 w-52 md:h-72 md:w-72 rounded-full object-cover border-8 border-[#F1F1F1CC]"
+            className="h-52 w-52 md:h-87.5 md:w-77.75 rounded-2xl object-cover border border-[#F1F1F1CC] px-3 pt-3 pb-14 bg-white absolute top-5 right-70"
+          />
+          <img
+            src={Natalia}
+            alt="Natália Lopes"
+            className="h-52 w-52 md:h-87.5 md:w-77.75 rounded-2xl object-cover border border-[#F1F1F1CC] px-3 pt-3 pb-14 bg-white absolute top-40 right-20"
           />
         </div>
 
         {/* BG decoration */}
         <img
-          src={headerBg}
+          src={headerDetail1}
           alt=""
-          className="absolute right-0 top-0 h-full w-auto object-cover z-0 opacity-60 pointer-events-none"
+          className="absolute left-150 top-50 h-98 w-auto object-cover z-0 opacity-60 pointer-events-none"
+        />
+        <img
+          src={headerDetail2}
+          alt=""
+          className="absolute left-250 -top-10 h-98 w-auto object-cover z-0 opacity-60 pointer-events-none"
         />
       </section>
 
@@ -277,8 +292,8 @@ function App() {
           {/* Photos + map */}
           <div className="flex gap-3">
             <img
-              src={madrid}
-              alt="Madrid"
+              src={brasil}
+              alt="Brasil"
               className="w-28 h-28 md:w-32 md:h-32 object-cover rounded-2xl shrink-0"
             />
             <img
@@ -293,7 +308,7 @@ function App() {
                 className="rounded-2xl w-full h-28 md:h-32 object-cover"
               />
               {/* Ping dot */}
-              <div className="absolute top-[55%] left-[70%] h-4 w-4 bg-blue-600 rounded-full border-2 border-white">
+              <div className="absolute top-[45%] md:top-[55%] left-[70%] h-4 w-4 bg-blue-600 rounded-full border-2 border-white">
                 <span className="relative flex size-3">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600 opacity-75" />
                 </span>
@@ -312,7 +327,7 @@ function App() {
       </div>
 
       {/* ── FOOTER / CTA ── */}
-      <section className="w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 pt-14 pb-10 flex flex-col items-center gap-5">
+      <section className="w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 pt-14 pb-10 flex flex-col items-center gap-5 relative">
         <h1 className="text-3xl md:text-5xl text-center">
           Open to new opportunities
         </h1>
@@ -341,6 +356,16 @@ function App() {
             </a>
           ))}
         </div>
+        <img
+          src={details1}
+          alt=""
+          className="absolute left-0 top-0 h-full w-auto object-cover z-0 opacity-0 md:opacity-60 pointer-events-none"
+        />
+        <img
+          src={details2}
+          alt=""
+          className="absolute right-0 top-0 h-full w-auto object-cover z-0 opacity-0 md:opacity-60 pointer-events-none"
+        />
       </section>
     </div>
   );
