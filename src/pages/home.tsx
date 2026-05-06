@@ -13,11 +13,9 @@ import project3 from "../assets/png/projects/group3.png";
 import project4 from "../assets/png/projects/group4.png";
 import project5 from "../assets/png/projects/group5.png";
 import project6 from "../assets/png/projects/group6.png";
-import behance from "../assets/svg/behance.svg";
 import claude from "../assets/svg/claude.svg";
 import clickup from "../assets/svg/clickup.svg";
 import loc from "../assets/svg/loc.svg";
-import dribbble from "../assets/svg/dribbble.svg";
 import figma from "../assets/svg/figma.svg";
 import framer from "../assets/svg/framer2.svg";
 import linkedin from "../assets/svg/linkedin.svg";
@@ -34,117 +32,33 @@ import Sporting from "../assets/svg/Sporting.svg";
 import Painting from "../assets/svg/Painting.svg";
 import Exploring from "../assets/svg/Exploring cities.svg";
 import Rewatching from "../assets/svg/Rewatching.svg";
-
-import x from "../assets/svg/x.svg";
 import headerBg from "../assets/svg/headerBg.svg";
 import Coment from "../components/Coment";
 
 const skills = [
-  {
-    icon: skill1,
-    label: "UX/UI Design",
-  },
-  {
-    icon: skill2,
-    label: "User Research",
-  },
-  {
-    icon: skill3,
-    label: "User Flow",
-  },
-  {
-    icon: skill4,
-    label: "Design System",
-  },
-  {
-    icon: skill5,
-    label: "Prototyping",
-  },
-  {
-    icon: skill6,
-    label: "Wireframing",
-  },
+  { icon: skill1, label: "UX/UI Design" },
+  { icon: skill2, label: "User Research" },
+  { icon: skill3, label: "User Flow" },
+  { icon: skill4, label: "Design System" },
+  { icon: skill5, label: "Prototyping" },
+  { icon: skill6, label: "Wireframing" },
 ];
 
 const beyondthescreen = [
-  {
-    icon: Photography,
-    label: "UX/UI Design",
-  },
-  {
-    icon: Traveling,
-    label: "Traveling",
-  },
-  {
-    icon: Sporting,
-    label: "Sporting",
-  },
-  {
-    icon: Painting,
-    label: "Painting",
-  },
-  {
-    icon: Exploring,
-    label: "Exploring cities",
-  },
-  {
-    icon: Rewatching,
-    label: "Rewatching",
-  },
+  { icon: Photography, label: "Photography" },
+  { icon: Traveling, label: "Traveling" },
+  { icon: Sporting, label: "Sporting" },
+  { icon: Painting, label: "Painting" },
+  { icon: Exploring, label: "Exploring cities" },
+  { icon: Rewatching, label: "Rewatching" },
 ];
 
-const social = [
-  {
-    name: "linkedin",
-    icon: linkedin,
-    bgColor: "#E5F3FF",
-    link: "https://www.linkedin.com/in/nat%C3%A1lia-lopes-855711192/",
-  },
-  {
-    name: "dribble",
-    icon: dribbble,
-    bgColor: "#FFECF1",
-    link: "https://dribbble.com/nataliamja",
-  },
-  {
-    name: "behance",
-    icon: behance,
-    bgColor: "#EAF5FF",
-    link: "https://www.behance.net/nataliamja",
-  },
-  {
-    name: "twitter",
-    icon: x,
-    bgColor: "#F3F3F3",
-    link: "https://x.com/anataliamja",
-  },
-];
 const tools = [
-  {
-    name: "figma",
-    icon: figma,
-    bgColor: "#F9F3FF",
-  },
-  {
-    name: "framer",
-    icon: framer,
-    bgColor: "#E8F8FF",
-  },
-  {
-    name: "clickup",
-    icon: clickup,
-    bgColor: "#FFEDF5",
-  },
-  {
-    name: "notion",
-    icon: notion,
-    bgColor: "#F3F3F3",
-  },
-  {
-    name: "claude",
-    icon: claude,
-    bgColor: "#FFF2EE",
-  },
+  { name: "figma", icon: figma, bgColor: "#F9F3FF" },
+  { name: "framer", icon: framer, bgColor: "#E8F8FF" },
+  { name: "clickup", icon: clickup, bgColor: "#FFEDF5" },
+  { name: "notion", icon: notion, bgColor: "#F3F3F3" },
+  { name: "claude", icon: claude, bgColor: "#FFF2EE" },
 ];
 
 const contact = [
@@ -152,315 +66,283 @@ const contact = [
     social: "Linkedin",
     link: "https://www.linkedin.com/in/nat%C3%A1lia-lopes-855711192/",
   },
-  {
-    social: "division",
-    link: "",
-  },
-  {
-    social: "Dribbble",
-    link: "https://dribbble.com/nataliamja",
-  },
-  {
-    social: "division",
-    link: "",
-  },
-  {
-    social: "Twitter",
-    link: "https://x.com/anataliamja",
-  },
+  { social: "division", link: "" },
+  { social: "Dribbble", link: "https://dribbble.com/nataliamja" },
+  { social: "division", link: "" },
+  { social: "Download CV", link: "" },
 ];
 
 const projects = [
-  {
-    name: "project 1",
-    img: project1,
-  },
-  {
-    name: "project 2",
-    img: project2,
-  },
-  {
-    name: "project 3",
-    img: project3,
-  },
-  {
-    name: "project 4",
-    img: project4,
-  },
-  {
-    name: "project 5",
-    img: project5,
-  },
-  {
-    name: "project 6",
-    img: project6,
-  },
+  { name: "project 1", img: project1 },
+  { name: "project 2", img: project2 },
+  { name: "project 3", img: project3 },
+  { name: "project 4", img: project4 },
+  { name: "project 5", img: project5 },
+  { name: "project 6", img: project6 },
 ];
 
 function App() {
   return (
-    <>
-      <div className="p-4 md:p-8 flex flex-col items-center justify-center gap-6 md:gap-8">
-        {/* section 1 - Hero */}
-        <section className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between border border-[#F1F1F0] rounded-3xl py-10 md:py-16 px-6 md:px-10 bg-white/85 w-full gap-8">
-          <div className="flex flex-col gap-6 md:gap-8 order-2 md:order-1">
-            <div className="flex flex-col gap-3 md:gap-4">
-              <h1 className="text-3xl md:text-5xl text-center md:text-left ">
-                I'm Natalia Lopes
-              </h1>
-              <div className="text-[#6B6760] text-lg md:text-2xl font-light w-full md:w-[60%] text-center md:text-left text-balance flex flex-col gap-6">
-                <p>
-                  Junior Product Designer with real experience. I work at Land,
-                  where I help build digital products from scratch, from the
-                  first idea to the last interface detail.
-                </p>
-                <p>
-                  From Brazil, now based in Madrid. Curious by nature — I
-                  question flows, understand users, and care about what actually
-                  makes sense.
-                </p>
-                <p>
-                  I paint, travel, and photograph everything worth remembering.
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-center md:justify-start gap-4">
-              <ButtonCta />
-              <a className="hover:cursor-pointer px-6 py-5 border border-black rounded-2xl inline-flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:bg-black group">
-                <img
-                  src={linkedin}
-                  alt="LinkedIn"
-                  className="w-6 h-6 brightness-0 transition duration-300 group-hover:invert"
-                />
-              </a>
-            </div>
+    <div className="p-4 md:p-8 flex flex-col items-center gap-4 md:gap-5">
+      {/* ── HERO ── */}
+      <section className="relative overflow-hidden w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-12 py-10 md:py-14 flex flex-col md:flex-row items-center justify-between gap-8">
+        {/* Text */}
+        <div className="flex flex-col gap-6 order-2 md:order-1 z-10">
+          <h1 className="text-4xl md:text-5xl text-center md:text-left">
+            I'm Natália Lopes
+          </h1>
+          <div className="text-[#6B6760] text-base md:text-lg font-light md:max-w-120 text-center md:text-left flex flex-col gap-4">
+            <p>
+              Junior Product Designer with real experience. I work at Land,
+              where I help build digital products from scratch, from the first
+              idea to the last interface detail.
+            </p>
+            <p>
+              From Brazil, now based in Madrid. Curious by nature — I question
+              flows, understand users, and care about what actually makes sense.
+            </p>
+            <p>I paint, travel, and photograph everything worth remembering.</p>
           </div>
+          <div className="flex justify-center md:justify-start gap-3">
+            <ButtonCta />
+            <a
+              href="https://www.linkedin.com/in/nat%C3%A1lia-lopes-855711192/"
+              target="_blank"
+              rel="noreferrer"
+              className="px-5 py-4 border border-black rounded-2xl inline-flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-black group"
+            >
+              <img
+                src={linkedin}
+                alt="LinkedIn"
+                className="w-5 h-5 brightness-0 transition duration-300 group-hover:invert"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Photo */}
+        <div className="order-1 md:order-2 shrink-0 z-10">
           <img
             src={Natalia}
-            alt=""
-            className="h-48 w-48 md:h-72 md:w-72 rounded-full object-cover border-8 border-[#F1F1F1CC] order-1 md:order-2 shrink-0 z-10"
+            alt="Natália Lopes"
+            className="h-52 w-52 md:h-72 md:w-72 rounded-full object-cover border-8 border-[#F1F1F1CC]"
           />
-          <img
-            src={headerBg}
-            alt=""
-            className="absolute -right-8 md:right-13 md:top-6 -top-10 z-0"
-          />
-        </section>
+        </div>
 
-        {/* PROJECTS */}
-        <section className="flex flex-col items-center border border-[#F1F1F0] rounded-3xl pt-10 md:pt-16 px-6 md:px-10 pb-10 bg-white/85 w-full">
-          <h2 className="text-[#9B9893] self-start mb-6">PROJECTS</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 w-full">
-            <ProjectCard
-              name={"Mova"}
-              label={
-                "Helping personal trainers and clients connect with their best shape"
-              }
-              link={""}
-              img={movaProject}
+        {/* BG decoration */}
+        <img
+          src={headerBg}
+          alt=""
+          className="absolute right-0 top-0 h-full w-auto object-cover z-0 opacity-60 pointer-events-none"
+        />
+      </section>
+
+      {/* ── PROJECTS ── */}
+      <section className="w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 pt-10 pb-10">
+        <h2 className="text-[#9B9893] text-xs tracking-widest mb-8">
+          PROJECTS
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <ProjectCard
+            name="Mova"
+            label="Helping personal trainers and clients connect with their best shape"
+            link="/mova"
+            img={movaProject}
+          />
+          <ProjectCard
+            name="Mimo"
+            label="Never forget someone's birthday again and become the best gift giver ever"
+            link="/mimo"
+            img={mimoProject}
+          />
+          <ProjectCard
+            name="Lumio"
+            label="Document your faith journey and feel closer to God than ever before"
+            link="/lumio"
+            img={lumioProject}
+          />
+        </div>
+      </section>
+
+      {/* ── RECENT WORK + SKILLS ── */}
+      <section className="w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 py-10">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-0">
+          {/* Left – Recent Work */}
+          <div className="md:w-[40%] flex flex-col gap-3">
+            <h2 className="text-[#9B9893] text-xs tracking-widest mb-2">
+              RECENT WORK
+            </h2>
+            <p className="text-2xl md:text-3xl font-normal">
+              Product Designer at LAND
+            </p>
+            <p className="text-[#9B9893] text-base">2025 – Currently</p>
+          </div>
+
+          {/* Divider */}
+          <div className="hidden md:block w-px bg-[#F1F1F0] mx-4 self-stretch" />
+
+          {/* Right – Skills */}
+          <div className="flex-1 flex flex-col gap-6">
+            <h2 className="text-[#9B9893] text-xs tracking-widest">SKILLS</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-5">
+              {skills.map((item, i) => (
+                <div key={i} className="flex items-center gap-4">
+                  <div className="bg-[#FFECF1] p-3 rounded-2xl flex items-center justify-center shrink-0">
+                    <img src={item.icon} alt="" className="h-6 w-6" />
+                  </div>
+                  <p className="text-base md:text-lg">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EXPLORATIONS ── */}
+      <section className="w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 pt-10 pb-10">
+        <h2 className="text-[#9B9893] text-xs tracking-widest mb-8">
+          EXPLORATIONS
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {projects.map((item, i) => (
+            <img
+              key={i}
+              src={item.img}
+              alt={item.name}
+              className="w-full h-auto rounded-2xl object-cover"
             />
-            <ProjectCard
-              name={"Mimo"}
-              label={
-                "Never forget someone's birthday again and become the best gift giver ever"
-              }
-              link={"/mimo"}
-              img={mimoProject}
+          ))}
+        </div>
+      </section>
+
+      {/* ── KIND WORDS + BEYOND THE SCREEN ── */}
+      <div className="w-full flex flex-col lg:flex-row gap-4 md:gap-5 items-stretch">
+        {/* KIND WORDS */}
+        <section className="lg:w-1/2 rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 pt-10 pb-10 flex flex-col gap-8">
+          <h2 className="text-[#9B9893] text-xs tracking-widest">KIND WORDS</h2>
+
+          {/* Top row – 2 comments side by side */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <Coment
+              text="Creativity, sensitivity, and excellence in every detail... It was a pleasure working with her."
+              link=""
+              linkLabel="Laura Magalhães"
+              position="Senior Product Design"
             />
-            <ProjectCard
-              name={"Lumio"}
-              label={
-                "Document your faith journey and feel closer to God than ever before"
-              }
-              link={""}
-              img={lumioProject}
+            <Coment
+              text="Creativity, sensitivity, and excellence in every detail... It was a pleasure working with her."
+              link=""
+              linkLabel="Alex Monteiro"
+              position="Frontend Developer"
             />
           </div>
+
+          {/* Bottom – 1 comment full width */}
+          <Coment
+            text="Creativity, sensitivity, and excellence in every detail... It was a pleasure working with her."
+            link=""
+            linkLabel="Dhiego Correa"
+            position="Senior Product Design"
+          />
         </section>
 
-        <section className="w-full rounded-3xl bg-white/85">
-          <div className="p-8 md:p-10 border border-[#F1F1F0] rounded-3xl bg-white/85 flex flex-row gap-8 md:gap-10">
-            <div className="w-[45%]">
-              <h2 className="text-[#9B9893] self-start pb-6 md:pb-9">
-                RECENT WORK
-              </h2>
-              <div className="flex flex-col gap-2">
-                <h1 className="text-2xl md:text-3xl">
-                  Product Designer at LAND
-                </h1>
-                <p className="text-[#9B9893] text-lg md:text-xl">
-                  2025 - Currently
+        {/* BEYOND THE SCREEN */}
+        <section className="lg:w-1/2 rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 pt-10 pb-10 flex flex-col gap-8">
+          <h2 className="text-[#9B9893] text-xs tracking-widest">
+            BEYOND THE SCREEN
+          </h2>
+
+          {/* Hobbies grid */}
+          <div className="grid grid-cols-3 gap-x-4 gap-y-5">
+            {beyondthescreen.map((item, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <div className="bg-[#FFECF1] p-3 rounded-2xl flex items-center justify-center shrink-0">
+                  <img src={item.icon} alt="" className="h-6 w-6" />
+                </div>
+                <p className="text-sm md:text-base leading-snug">
+                  {item.label}
                 </p>
               </div>
-            </div>
-            <div className="bg-[#F1F1F0] w-0.5"></div>
-            <div className="px-20">
-              <h2 className="text-[#9B9893] self-start pb-6 md:pb-8">SKILLS</h2>
-              <div className="flex flex-row flex-wrap gap-8 ">
-                {skills.map((item, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-row gap-5 items-center pb-5 md:pb-6"
-                  >
-                    <div className="bg-[#FFECF1] p-3 rounded-2xl flex items-center justify-center shrink-0">
-                      <img
-                        src={item.icon}
-                        alt="skillIcon.svg"
-                        className="h-6 w-6"
-                      />
-                    </div>
-                    <p className="text-lg md:text-xl">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
 
-        {/* EXPLORATIONS */}
-        <section className="flex flex-col items-center border border-[#F1F1F0] rounded-3xl pt-10 md:pt-16 px-6 md:px-10 pb-10 bg-white/85 w-full">
-          <h2 className="text-[#9B9893] self-start pb-6 md:pb-9">
-            EXPLORATIONS
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-5">
-            {projects.map((item, i) => (
+          {/* Quote */}
+          <Coment
+            text="Courage would be to look. Just look. Try. Dare to feel lost."
+            link=""
+            linkLabel={false}
+            position="— Clarice Lispector"
+          />
+
+          {/* Photos + map */}
+          <div className="flex gap-3">
+            <img
+              src={madrid}
+              alt="Madrid"
+              className="w-28 h-28 md:w-32 md:h-32 object-cover rounded-2xl shrink-0"
+            />
+            <img
+              src={madrid}
+              alt="Madrid"
+              className="w-28 h-28 md:w-32 md:h-32 object-cover rounded-2xl shrink-0"
+            />
+            <div className="relative flex-1 min-w-0">
               <img
-                key={i}
-                src={item.img}
-                alt=""
-                className="h-48 md:h-64 w-auto"
+                src={madridMap}
+                alt="Map"
+                className="rounded-2xl w-full h-28 md:h-32 object-cover"
               />
-            ))}
-          </div>
-        </section>
-
-        {/* RECENT WORK */}
-        <section className="w-full rounded-3xl bg-white/85">
-          <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
-            {/* Left card */}
-            <div className="p-8 md:p-10 border border-[#F1F1F0] rounded-3xl bg-white/85 flex flex-col gap-8 md:gap-10 w-full lg:w-[45%]">
-              <div className="flex flex-col gap-8">
-                <h2 className="text-[#9B9893] self-start">KIND WORDS</h2>
-                <div className="flex flex-row gap-8">
-                  <Coment
-                    text="Creativity, sensitivity, and excellence in every detail... It was a pleasure working with her."
-                    link={""}
-                    linkLabel="Laura Magalhães"
-                    position="Senior Product Design"
-                  />
-                  <Coment
-                    text="Creativity, sensitivity, and excellence in every detail... It was a pleasure working with her."
-                    link={""}
-                    linkLabel="Alex Monteiro"
-                    position="Frontend Developer"
-                  />
-                </div>
-                <Coment
-                  text="Creativity, sensitivity, and excellence in every detail... It was a pleasure working with her."
-                  link={""}
-                  linkLabel="Dhiego Correa"
-                  position="Senior Product Design"
-                />
+              {/* Ping dot */}
+              <div className="absolute top-[55%] left-[70%] h-4 w-4 bg-blue-600 rounded-full border-2 border-white">
+                <span className="relative flex size-3">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600 opacity-75" />
+                </span>
               </div>
-            </div>
-
-            {/* Right column */}
-            <div className="flex flex-col gap-6 md:gap-8 flex-1">
-              <div className="flex flex-col gap-10 md:gap-14 border border-[#F1F1F0] rounded-3xl p-8 md:p-10 bg-white/85 ">
-                <div>
-                  <h2 className="text-[#9B9893] self-start pb-6 md:pb-8">
-                    BEYOND THE SCREEN
-                  </h2>
-                  <div className="grid grid-cols-3 gap-8">
-                    {beyondthescreen.map((item, i) => (
-                      <div
-                        key={i}
-                        className="flex flex-row gap-5 items-center pb-5 md:pb-6"
-                      >
-                        <div className="bg-[#FFECF1] p-3 rounded-2xl flex items-center justify-center shrink-0">
-                          <img
-                            src={item.icon}
-                            alt="skillIcon.svg"
-                            className="h-6 w-6"
-                          />
-                        </div>
-                        <p className="text-lg md:text-xl">{item.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <Coment
-                  text="Courage would be to look. Just look. Try. Dare to feel lost."
-                  link={""}
-                  linkLabel={false}
-                  position="— Clarice Lispector"
-                />
-                <div className="flex flex-col sm:flex-row gap-4 md:gap-8">
-                  <img
-                    src={madrid}
-                    alt=""
-                    className="w-36 h-32.5 object-cover rounded-3xl"
-                  />
-                  <img
-                    src={madrid}
-                    alt=""
-                    className="w-36 h-32.5 object-cover rounded-3xl"
-                  />
-                  <div className="relative w-full sm:w-1/2">
-                    <img
-                      src={madridMap}
-                      className="rounded-3xl h-32.5 w-full object-cover"
-                    />
-                    <div className="absolute top-[55%] left-[48%] h-4 w-4 bg-blue-600 rounded-full border-2 border-white">
-                      <span className="relative flex size-3">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600 opacity-75"></span>
-                      </span>
-                    </div>
-                    <div className="bg-white border border-black/5 px-4 py-2 rounded-3xl absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 whitespace-nowrap">
-                      <img src={loc} alt="" />
-                      <p className="text-black text-sm">Madrid, Spain</p>
-                    </div>
-                  </div>
-                </div>
-                {/* <ToolsMap arr={social} title={"SOCIAL"} activeLink={true} /> */}
-                <ToolsMap arr={tools} title={"FAVORITE TOOLS"} />
+              {/* Location badge */}
+              <div className="bg-white border border-black/5 px-3 py-1.5 rounded-2xl absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 whitespace-nowrap shadow-sm">
+                <img src={loc} alt="" className="w-3.5 h-3.5" />
+                <p className="text-black text-xs">Madrid, Spain</p>
               </div>
             </div>
           </div>
-        </section>
 
-        {/* FOOTER */}
-        <section className="flex flex-col items-center border border-[#F1F1F0] rounded-3xl pt-10 md:pt-16 px-6 md:px-10 pb-10 bg-white/85 w-full">
-          <h1 className="text-3xl md:text-5xl text-center md:text-left">
-            Open to new opportunities
-          </h1>
-          <p className="text-xl text-[#9B9893] font-light pt-5">
-            Reach me at{" "}
-            <a
-              href="mailto:natalialopes.mja@gmail.com"
-              className="hover:text-[#D4315E]/80 transition-transform"
-            >
-              natalialopes.mja@gmail.com
-            </a>
-          </p>
-          <div className="pt-6 pb-10">
-            <ButtonCta />
-          </div>
-          <div className="flex flex-row gap-8">
-            {contact.map((item, i) => (
-              <a
-                key={i}
-                href={item.link}
-                className="text-[16px] text-[#C4C1BC] hover:text-[#D4315E]/80 transition-transform"
-                target="blank"
-              >
-                {item.social === "division" ? "·" : item.social}
-              </a>
-            ))}
-          </div>
+          {/* Favorite tools */}
+          <ToolsMap arr={tools} title="FAVORITE TOOLS" />
         </section>
       </div>
-    </>
+
+      {/* ── FOOTER / CTA ── */}
+      <section className="w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 pt-14 pb-10 flex flex-col items-center gap-5">
+        <h1 className="text-3xl md:text-5xl text-center">
+          Open to new opportunities
+        </h1>
+        <p className="text-base md:text-lg text-[#9B9893] font-light">
+          Reach me at{" "}
+          <a
+            href="mailto:natalialopes.mja@gmail.com"
+            className="hover:text-[#D4315E] transition-colors"
+          >
+            natalialopes.mja@gmail.com
+          </a>
+        </p>
+        <div className="pt-2 pb-6">
+          <ButtonCta />
+        </div>
+        <div className="flex flex-row gap-6">
+          {contact.map((item, i) => (
+            <a
+              key={i}
+              href={item.link}
+              className="text-sm text-[#C4C1BC] hover:text-[#D4315E] transition-colors"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {item.social === "division" ? "·" : item.social}
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
 
