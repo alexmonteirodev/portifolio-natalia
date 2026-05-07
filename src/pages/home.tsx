@@ -1,5 +1,6 @@
 import ButtonCta from "../components/ButtonCta";
 import Natalia from "../assets/jpg/nataliaPerfil.jpg";
+import Natalia2 from "../assets/jpg/nataliaPerfil2.jpg";
 import mimoProject from "../assets/png/mimo/mimoProject.png";
 import lumioProject from "../assets/png/lumio/lumioProject.png";
 import movaProject from "../assets/png/mova/movaProject.png";
@@ -33,11 +34,10 @@ import Sporting from "../assets/svg/Sporting.svg";
 import Painting from "../assets/svg/Painting.svg";
 import Exploring from "../assets/svg/Exploring cities.svg";
 import Rewatching from "../assets/svg/Rewatching.svg";
-import details1 from "../assets/svg/details1.svg";
-import details2 from "../assets/svg/details2.svg";
 import headerDetail1 from "../assets/svg/headerdetail1.svg";
 import headerDetail2 from "../assets/svg/headerdetail2.svg";
 import Coment from "../components/Coment";
+import Footer from "../components/Footer";
 
 const skills = [
   { icon: skill1, label: "UX/UI Design" },
@@ -87,15 +87,15 @@ const projects = [
 
 function App() {
   return (
-    <div className="p-4 md:p-8 flex flex-col items-center gap-4 md:gap-5">
+    <div className="p-4 md:p-8 flex flex-col items-center gap-4 md:gap-5 relative overflow-x-hidden">
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-12 py-10 md:py-14 flex flex-col md:flex-row items-center justify-between gap-8 ">
+      <section className="relative overflow-hidden w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-12 py-10 md:py-18 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Text */}
         <div className="flex flex-col gap-6 order-2 md:order-1 z-10">
           <h1 className="text-4xl md:text-5xl text-center md:text-left">
             I'm Natália Lopes
           </h1>
-          <div className="text-[#6B6760] text-base md:text-lg font-light md:max-w-120 text-center md:text-left flex flex-col gap-4">
+          <div className="text-[#6B6760] text-base md:text-lg font-light md:max-w-130 text-center md:text-left flex flex-col gap-4">
             <p>
               Junior Product Designer with real experience. I work at Land,
               where I help build digital products from scratch, from the first
@@ -124,45 +124,49 @@ function App() {
           </div>
         </div>
 
-        {/* Photo */}
-        <div className="order-1 md:order-2 shrink-0 z-10 ">
+        {/* Photo — mobile: foto simples centralizada; desktop: polaroids originais */}
+        <div className="order-1 md:order-2 shrink-0 z-10">
+          {/* Só aparece no mobile */}
+          <img
+            src={Natalia}
+            alt="Natália Lopes"
+            className="block md:hidden h-52 w-44 rounded-2xl object-cover border border-[#F1F1F1CC] px-2 pt-2 pb-8 bg-white shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
+          />
+          {/* Desktop: mantém exatamente como estava */}
           <img
             src={Natalia}
             alt="Natália Lopes"
             className="
-    h-52 w-52 md:h-87.5 md:w-77.75
-    rounded-2xl object-cover
-    border border-[#F1F1F1CC]
-    px-3 pt-3 pb-14
-    bg-white
-    absolute top-5 right-70
-
-    shadow-[0_20px_40px_rgba(0,0,0,0.18)]
-    transition-all duration-500 ease-out
-    hover:-translate-y-4
-    hover:scale-[1.03]
-   hover:-rotate-2
-    hover:shadow-[0_35px_60px_rgba(0,0,0,0.28)]
-  "
+              hidden md:block
+              md:h-87.5 md:w-75
+              rounded-2xl object-cover
+              border border-[#F1F1F1CC]
+              px-3 pt-3 pb-14
+              bg-white
+              absolute top-8 right-70
+              shadow-[0_20px_40px_rgba(0,0,0,0.18)]
+              transition-all duration-500 ease-out
+              hover:-translate-y-4 hover:scale-[1.03] hover:-rotate-2
+              hover:shadow-[0_35px_60px_rgba(0,0,0,0.20)]
+            "
           />
           <img
-            src={Natalia}
+            src={Natalia2}
             alt="Natália Lopes"
             className="
-    h-52 w-52 md:h-87.5 md:w-77.75
-    rounded-2xl object-cover
-    border border-[#F1F1F1CC]
-    px-3 pt-3 pb-14
-    bg-white
-    absolute top-40 right-25
-   rotate-6
-    shadow-[0_20px_40px_rgba(0,0,0,0.18)]
-    transition-all duration-500 ease-out
-    hover:-translate-y-5
-    hover:scale-[1.04]
-hover:rotate-10
-    hover:shadow-[0_40px_70px_rgba(0,0,0,0.30)]
-  "
+              hidden md:block
+              md:h-80 md:w-70
+              rounded-2xl object-cover
+              border border-[#F1F1F1CC]
+              px-3 pt-3 pb-14
+              bg-white
+              absolute top-45 right-25
+              rotate-6
+              shadow-[0_20px_40px_rgba(0,0,0,0.10)]
+              transition-all duration-500 ease-out
+              hover:-translate-y-5 hover:scale-[1.04] hover:rotate-10
+              hover:shadow-[0_40px_70px_rgba(0,0,0,0.20)]
+            "
           />
         </div>
 
@@ -170,15 +174,14 @@ hover:rotate-10
         <img
           src={headerDetail1}
           alt=""
-          className="absolute left-150 top-50 h-98 w-auto object-cover z-0 opacity-60 pointer-events-none"
+          className="hidden md:block absolute left-150 top-50 h-98 w-auto object-cover z-0 opacity-60 pointer-events-none"
         />
         <img
           src={headerDetail2}
           alt=""
-          className="absolute left-250 -top-10 h-98 w-auto object-cover z-0 opacity-60 pointer-events-none"
+          className="hidden md:block absolute left-250 -top-10 h-98 w-auto object-cover z-0 opacity-60 pointer-events-none"
         />
       </section>
-
       {/* ── PROJECTS ── */}
       <section className="w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 pt-10 pb-10">
         <h2 className="text-[#9B9893] text-xs tracking-widest mb-8">
@@ -354,46 +357,13 @@ hover:rotate-10
       </div>
 
       {/* ── FOOTER / CTA ── */}
-      <section className="w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 pt-14 pb-10 flex flex-col items-center gap-5 relative">
-        <h1 className="text-3xl md:text-5xl text-center">
-          Open to new opportunities
-        </h1>
-        <p className="text-base md:text-lg text-[#9B9893] font-light">
-          Reach me at{" "}
-          <a
-            href="mailto:natalialopes.mja@gmail.com"
-            className="hover:text-[#D4315E] transition-colors"
-          >
-            natalialopes.mja@gmail.com
-          </a>
-        </p>
-        <div className="pt-2 pb-6">
-          <ButtonCta />
-        </div>
-        <div className="flex flex-row gap-6">
-          {contact.map((item, i) => (
-            <a
-              key={i}
-              href={item.link}
-              className="text-sm text-[#C4C1BC] hover:text-[#D4315E] transition-colors"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {item.social === "division" ? "·" : item.social}
-            </a>
-          ))}
-        </div>
-        <img
-          src={details1}
-          alt=""
-          className="absolute left-0 top-0 h-full w-auto object-cover z-0 opacity-0 md:opacity-60 pointer-events-none"
-        />
-        <img
-          src={details2}
-          alt=""
-          className="absolute right-0 top-0 h-full w-auto object-cover z-0 opacity-0 md:opacity-60 pointer-events-none"
-        />
-      </section>
+
+      <Footer contact={contact} />
+
+      <div className="absolute w-360 h-110.75 rounded-full blur-[250px] md:-top-5 bg-[#FFEAD3]/60 -z-10" />
+      <div className="absolute w-360 h-110.75 rounded-full blur-[250px] top-580 md:top-280 bg-[#FFEAD3]/60 -z-10" />
+      <div className="absolute w-360 h-110.75 rounded-full blur-[250px] top-840 -left-150 md:top-570 md:-left-150 bg-[#FFDBF6]/60 -z-10" />
+      <div className="absolute w-360 h-110.75 rounded-full blur-[250px] top-1200 -right-100 md:top-720 md:-right-200 bg-[#FFEAD3]/60 -z-10" />
     </div>
   );
 }

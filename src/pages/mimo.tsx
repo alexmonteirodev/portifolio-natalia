@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ButtonCta from "../components/ButtonCta";
 import mimoIcon from "../assets/png/mimo/mimoicon.png";
 import mimo1 from "../assets/png/mimo/mimo1.png";
 import mimo2 from "../assets/png/mimo/mimo2.png";
@@ -13,6 +12,7 @@ import mimo9 from "../assets/png/mimo/mimo9.png";
 import mimo10 from "../assets/png/mimo/mimo10.png";
 import mimo11 from "../assets/png/mimo/mimo11.png";
 import mimo12 from "../assets/png/mimo/mimo12.png";
+import Footer from "../components/Footer";
 
 const contact = [
   {
@@ -350,36 +350,7 @@ function Mimo() {
       </section>
 
       {/* ── FOOTER / CTA ── */}
-      <section className="w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-6 md:px-10 pt-14 pb-10 flex flex-col items-center gap-5">
-        <h1 className="text-3xl md:text-5xl text-center font-normal">
-          Open to new opportunities
-        </h1>
-        <p className="text-base md:text-lg text-[#9B9893] font-light">
-          Reach me at{" "}
-          <a
-            href="mailto:natalialopes.mja@gmail.com"
-            className="hover:text-[#D4315E] transition-colors"
-          >
-            natalialopes.mja@gmail.com
-          </a>
-        </p>
-        <div className="pt-2 pb-6">
-          <ButtonCta />
-        </div>
-        <div className="flex flex-row flex-wrap justify-center gap-4 md:gap-6">
-          {contact.map((item, i) => (
-            <a
-              key={i}
-              href={item.link || "#"}
-              className="text-sm text-[#C4C1BC] hover:text-[#D4315E] transition-colors"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {item.social === "division" ? "·" : item.social}
-            </a>
-          ))}
-        </div>
-      </section>
+      <Footer contact={contact} />
     </div>
   );
 }
