@@ -37,7 +37,6 @@ import details1 from "../assets/svg/details1.svg";
 import details2 from "../assets/svg/details2.svg";
 import headerDetail1 from "../assets/svg/headerdetail1.svg";
 import headerDetail2 from "../assets/svg/headerdetail2.svg";
-import headerBg from "../assets/svg/headerBg.svg";
 import Coment from "../components/Coment";
 
 const skills = [
@@ -103,7 +102,7 @@ function App() {
               idea to the last interface detail.
             </p>
             <p>
-              From Brazil, now based in Madrid. Curious by nature — I question
+              From Brazil, now based in Madrid. Curious by nature I question
               flows, understand users, and care about what actually makes sense.
             </p>
             <p>I paint, travel, and photograph everything worth remembering.</p>
@@ -130,12 +129,40 @@ function App() {
           <img
             src={Natalia}
             alt="Natália Lopes"
-            className="h-52 w-52 md:h-87.5 md:w-77.75 rounded-2xl object-cover border border-[#F1F1F1CC] px-3 pt-3 pb-14 bg-white absolute top-5 right-70"
+            className="
+    h-52 w-52 md:h-87.5 md:w-77.75
+    rounded-2xl object-cover
+    border border-[#F1F1F1CC]
+    px-3 pt-3 pb-14
+    bg-white
+    absolute top-5 right-70
+
+    shadow-[0_20px_40px_rgba(0,0,0,0.18)]
+    transition-all duration-500 ease-out
+    hover:-translate-y-4
+    hover:scale-[1.03]
+   hover:-rotate-2
+    hover:shadow-[0_35px_60px_rgba(0,0,0,0.28)]
+  "
           />
           <img
             src={Natalia}
             alt="Natália Lopes"
-            className="h-52 w-52 md:h-87.5 md:w-77.75 rounded-2xl object-cover border border-[#F1F1F1CC] px-3 pt-3 pb-14 bg-white absolute top-40 right-20"
+            className="
+    h-52 w-52 md:h-87.5 md:w-77.75
+    rounded-2xl object-cover
+    border border-[#F1F1F1CC]
+    px-3 pt-3 pb-14
+    bg-white
+    absolute top-40 right-25
+   rotate-6
+    shadow-[0_20px_40px_rgba(0,0,0,0.18)]
+    transition-all duration-500 ease-out
+    hover:-translate-y-5
+    hover:scale-[1.04]
+hover:rotate-10
+    hover:shadow-[0_40px_70px_rgba(0,0,0,0.30)]
+  "
           />
         </div>
 
