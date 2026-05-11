@@ -13,6 +13,7 @@ import mimo10 from "../assets/png/mimo/mimo10.png";
 import mimo11 from "../assets/png/mimo/mimo11.png";
 import mimo12 from "../assets/png/mimo/mimo12.png";
 import Footer from "../components/Footer";
+import React from "react";
 
 const contact = [
   {
@@ -49,6 +50,10 @@ const processSteps = [
 ];
 
 function Mimo() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="p-4 md:p-8 flex flex-col items-center gap-4 md:gap-5">
       {/* ── HEADER ── */}
