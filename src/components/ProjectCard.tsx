@@ -12,7 +12,9 @@ function ProjectCard({ name, label, link, img }: Card) {
       <div className="flex flex-row items-center w-full justify-between">
         <div>
           <p className="text-2xl">{name}</p>
-          <p className="text-[16px] text-[#9B9893]">{label}</p>
+          <p className="text-base md:text-lg text-[#6B6760] font-light">
+            {label}
+          </p>
         </div>
         <Link
           to={link}

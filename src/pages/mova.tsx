@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
 import movaIcon from "../assets/png/mova/movaIcon.png";
-
-import mova1 from "../assets/png/mova/mova1.png";
-import mova2 from "../assets/png/mova/mova2.png";
-import mova3 from "../assets/png/mova/mova3.png";
-import mova4 from "../assets/png/mova/mova4.png";
-import mova5 from "../assets/png/mova/mova5.png";
+import movaHero from "../assets/png/mova/mova-hero.png";
+import tradeoffHero from "../assets/png/mova/tradeoff-hero-mova.png";
 import mova6 from "../assets/png/mova/mova6.png";
 import mova7 from "../assets/png/mova/mova7.png";
-import mova8 from "../assets/png/mova/mova9.png";
 import mova9 from "../assets/png/mova/mova9.png";
 import mova10 from "../assets/png/mova/mova10.png";
 import mova11 from "../assets/png/mova/mova11.png";
@@ -48,6 +43,45 @@ const processSteps = [
     number: "04",
     title: "Handoff",
     text: "Close collaboration with developers throughout the entire process, not just at the end. Regular syncs ensured technical feasibility was considered from wireframe stage, reducing rework and keeping both platforms aligned.",
+  },
+];
+
+const decision = [
+  {
+    number: 1,
+    title1: "WE CHOSE",
+    p1a: "Web  first, mobile later",
+    p1b: "We focused on the web experience before building the mobile app.",
+    title2: "WE GAINED",
+    p2a: "Focus and consistency in the trainer’s core experience.",
+    p2b: "We built a stronger foundation for personal trainers with a consistent and powerful experience.",
+    title3: "WE SACRIFICED",
+    p3a: "Delayed the delivery of the student experience.",
+    p3b: "Students have to wait longer for a dedicated mobile experience.",
+  },
+  {
+    number: 2,
+    title1: "WE CHOSE",
+    p1a: "A more guided workout creation flow.",
+    p1b: "Instead of a fully free-form workout builder.",
+    title2: "WE GAINED",
+    p2a: "Simplicity for new users.",
+    p2b: "A guided flow reduces friction and helps trainers create their first workouts faster.",
+    title3: "WE SACRIFICED",
+    p3a: "Limited flexibility for experienced trainers.",
+    p3b: "Advanced trainers have less freedom to customize their workouts.",
+  },
+  {
+    number: 3,
+    title1: "WE CHOSE",
+    p1a: "To leave the financial module out of the MVP.",
+    p1b: "We focused on validating the core product first.",
+    title2: "WE GAINED",
+    p2a: "Speed to validate the core of the product.",
+    p2b: "We can test the main value proposition and iterate faster.",
+    title3: "WE SACRIFICED",
+    p3a: "We postponed one of the biggest pains identified in research.",
+    p3b: "Financial management is a critical need for trainers and will come next.",
   },
 ];
 
@@ -148,40 +182,7 @@ function Mova() {
 
       {/* ── HERO GRID ── */}
       <section className="w-full rounded-3xl bg-white/85 px-6 md:px-10 pt-10 pb-10">
-        <div className="flex flex-col md:flex-row gap-6">
-          {/* Coluna esquerda */}
-          <div className="flex flex-col gap-6">
-            <img
-              src={mova1}
-              alt=""
-              className="w-full md:w-auto md:h-62 object-contain rounded-xl"
-            />
-            <div className="flex gap-4 md:gap-0 md:justify-between">
-              <img
-                src={mova2}
-                alt=""
-                className="w-1/2 md:w-94.25 h-48 md:h-92.5 object-contain rounded-xl"
-              />
-              <img
-                src={mova3}
-                alt=""
-                className="w-1/2 md:w-75 h-48 md:h-92.5 object-contain rounded-xl"
-              />
-            </div>
-          </div>
-
-          {/* Coluna direita */}
-          <div className="flex flex-col gap-6">
-            <div className="w-full md:w-162.5 h-48 md:h-90 rounded-xl overflow-hidden">
-              <img src={mova4} alt="" className="w-full h-full object-cover" />
-            </div>
-            <img
-              src={mova5}
-              alt=""
-              className="w-full md:w-162.5 h-48 md:h-64 object-contain rounded-xl"
-            />
-          </div>
-        </div>
+        <img src={movaHero} alt="" className="" />
       </section>
 
       {/* ── PROBLEM ── */}
@@ -190,7 +191,7 @@ function Mova() {
           Problem
         </span>
 
-        <div className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-16">
+        <div className="flex flex-col gap-6 ">
           <div className="md:w-[38%] shrink-0">
             <h2 className="text-2xl md:text-4xl font-normal leading-snug">
               What problem{" "}
@@ -199,7 +200,7 @@ function Mova() {
               </span>
             </h2>
           </div>
-          <div className="flex flex-col gap-4 text-[#1A1814] text-base md:text-2xl leading-relaxed font-light flex-1 md:max-w-[650px]">
+          <div className="flex flex-col gap-4 text-[#1A1814] text-base md:text-2xl leading-relaxed font-light flex-1">
             <p>
               We ran interviews, surveys, and competitive benchmarking with over
               10 personal trainers. Three layers of pain emerged:
@@ -224,6 +225,71 @@ function Mova() {
               infrastructure for it.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* ── DECISION ── */}
+      <section className="w-full rounded-3xl bg-white/85 px-6 md:px-10 pt-10 pb-10 flex flex-col gap-8">
+        <span className="text-[#9B9893] tracking-widest text-xs uppercase">
+          Decision
+        </span>
+
+        <div className="flex flex-col gap-6 ">
+          <div className="md:w-[38%] shrink-0">
+            <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+              What were the{" "}
+              <span className="text-[#9B9893] italic font-light">
+                trade-offs?
+              </span>
+            </h2>
+          </div>
+          <div className="flex flex-col gap-4 text-[#1A1814] text-base md:text-2xl leading-relaxed font-light flex-1">
+            <p>
+              MOVA wasn’t designed to do everything from day one. It was
+              designed to solve the most painful workflows first.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {decision.map((item) => (
+              <div
+                key={item.number}
+                className="flex flex-col h-full gap-6 px-6 md:px-8 py-6 border border-black/6 rounded-3xl bg-white"
+              >
+                <p className="text-[#D4315D] bg-[#FFECF1] text-xl md:text-2xl px-5 py-3 rounded-2xl w-fit">
+                  {item.number}
+                </p>
+
+                <div className="flex flex-col gap-2">
+                  <p className="text-[#D4315D] text-sm md:text-base">
+                    {item.title1}
+                  </p>
+                  <p className="font-bold text-lg">{item.p1a}</p>
+                  <p className="text-neutral-700">{item.p1b}</p>
+                </div>
+
+                <hr className="border-[#F2F2F2]" />
+
+                <div className="flex flex-col gap-2">
+                  <p className="text-[#1E841E] text-sm md:text-base">
+                    {item.title2}
+                  </p>
+                  <p className="font-bold text-lg">{item.p2a}</p>
+                  <p className="text-neutral-700">{item.p2b}</p>
+                </div>
+
+                <hr className="border-[#F2F2F2]" />
+
+                <div className="flex flex-col gap-2">
+                  <p className="text-[#D43131] text-sm md:text-base">
+                    {item.title3}
+                  </p>
+                  <p className="font-bold text-lg">{item.p3a}</p>
+                  <p className="text-neutral-700">{item.p3b}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <img src={tradeoffHero} alt="" className="" />
         </div>
       </section>
 
@@ -310,11 +376,9 @@ function Mova() {
           </p>
         </div>
 
-        <img
-          src={mova8}
-          alt=""
-          className="w-full h-64 md:h-[420px] object-cover rounded-2xl"
-        />
+        <video autoPlay muted loop playsInline className="w-full rounded-3xl">
+          <source src="/videos/video-mova.mov" type="video/mp4" />
+        </video>
       </section>
 
       {/* ── LEARNINGS ── */}

@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import lumioIcon from "../assets/png/lumio/lumioIcon.png";
-import lumio1 from "../assets/png/lumio/lumio1.png";
-import lumio2 from "../assets/png/lumio/lumio2.png";
-import lumio3 from "../assets/png/lumio/lumio3.png";
-import lumio4 from "../assets/png/lumio/lumio4.png";
-import lumio5 from "../assets/png/lumio/lumio5.png";
+import lumioHero from "../assets/png/lumio/lumio-hero.png";
 import lumio6 from "../assets/png/lumio/lumio6.png";
 import lumio7 from "../assets/png/lumio/lumio7.png";
 import lumio8 from "../assets/png/lumio/lumio9.png";
@@ -95,7 +91,7 @@ function Lumio() {
                 </span>
               ))}
               <a
-                href="https://www.instagram.com/lumioclub.br?igsh=MWkzNTN3YnRra2xvdA=="
+                href="https://apps.apple.com/us/app/lumio-bible-devotionals/id6755790168"
                 target="blank"
                 className="group inline-flex items-center justify-center gap-2 rounded-3xl px-3 py-1.5 transition-all duration-300 hover:-translate-y-1 text-xs border border-[#D4315D] text-[#D4315D] bg-[#FFECF1]"
               >
@@ -145,40 +141,7 @@ function Lumio() {
 
       {/* ── HERO GRID ── */}
       <section className="w-full rounded-3xl bg-white/85 px-6 md:px-10 pt-10 pb-10">
-        <div className="flex flex-col md:flex-row gap-6">
-          {/* Coluna esquerda */}
-          <div className="flex flex-col gap-6">
-            <img
-              src={lumio1}
-              alt=""
-              className="w-full md:w-auto md:h-62 object-contain rounded-xl"
-            />
-            <div className="flex gap-4 md:gap-0 md:justify-between">
-              <img
-                src={lumio2}
-                alt=""
-                className="w-1/2 md:w-94.25 h-48 md:h-92.5 object-contain rounded-xl"
-              />
-              <img
-                src={lumio3}
-                alt=""
-                className="w-1/2 md:w-75 h-48 md:h-92.5 object-contain rounded-xl"
-              />
-            </div>
-          </div>
-
-          {/* Coluna direita */}
-          <div className="flex flex-col gap-6">
-            <div className="w-full md:w-162.5 h-48 md:h-90 rounded-xl overflow-hidden">
-              <img src={lumio4} alt="" className="w-full h-full object-cover" />
-            </div>
-            <img
-              src={lumio5}
-              alt=""
-              className="w-full md:w-162.5 h-48 md:h-64 object-contain rounded-xl"
-            />
-          </div>
-        </div>
+        <img src={lumioHero} alt="" className="" />
       </section>
 
       {/* ── PROBLEM ── */}
@@ -187,7 +150,7 @@ function Lumio() {
           Problem
         </span>
 
-        <div className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-16">
+        <div className="flex flex-col  gap-6 ">
           <div className="md:w-[38%] shrink-0">
             <h2 className="text-2xl md:text-4xl font-normal leading-snug">
               What problem{" "}
@@ -196,7 +159,7 @@ function Lumio() {
               </span>
             </h2>
           </div>
-          <div className="flex flex-col gap-4 text-[#1A1814] text-base md:text-2xl leading-relaxed font-light flex-1 md:max-w-[650px]">
+          <div className="flex flex-col gap-4 text-[#1A1814] text-base md:text-2xl leading-relaxed font-light flex-1 ">
             <p>
               Existing devotional apps are rigid, visually dated, and
               disconnected from how people actually feel day to day. They offer
@@ -223,6 +186,46 @@ function Lumio() {
               managing workouts, it was running a business with no
               infrastructure for it.
             </p> */}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Decision ── */}
+      <section className="w-full rounded-3xl bg-white/85 px-6 md:px-10 pt-10 pb-10 flex flex-col gap-8">
+        <span className="text-[#9B9893] tracking-widest text-xs uppercase">
+          Problem
+        </span>
+
+        <div className="flex flex-col  gap-6 ">
+          <div className="md:w-[38%] shrink-0">
+            <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+              What problem{" "}
+              <span className="text-[#9B9893] italic font-light">
+                trade-offs?
+              </span>
+            </h2>
+          </div>
+          <div className="flex flex-col gap-4 text-[#1A1814] text-base md:text-2xl leading-relaxed font-light flex-1 ">
+            <p>
+              For Lumio, we prioritized the emotional experience, connecting
+              mood to scripture instead of focusing on advanced functionality
+              from the start. This gave the product a more distinctive and
+              meaningful positioning in the market, although it may initially
+              feel too simple for users expecting a feature-heavy app.
+            </p>
+            <p>
+              We also chose a fixed daily flow rather than fully open
+              navigation. This helped reinforce habit-building and created a
+              calmer, more guided experience, but limited users who prefer
+              exploring the Bible in a more flexible and non-linear way.
+            </p>
+            <p>
+              A significant part of our effort went into crafting the product’s
+              visual identity and tone of voice. This gave Lumio a strong
+              personality and clear differentiation from traditional devotional
+              apps, although it required a considerable time investment for a
+              small team.
+            </p>
           </div>
         </div>
       </section>

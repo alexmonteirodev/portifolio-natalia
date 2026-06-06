@@ -217,10 +217,12 @@ function App() {
             <h2 className="text-[#9B9893] text-xs tracking-widest mb-2">
               RECENT WORK
             </h2>
-            <p className="text-2xl md:text-3xl font-normal">
+            <p className="text-2xl md:text-2xl font-light">
               Product Designer at LAND
             </p>
-            <p className="text-[#9B9893] text-base">2025 – Currently</p>
+            <p className="text-base md:text-lg text-[#6B6760] font-light">
+              2025 – Currently
+            </p>
           </div>
 
           {/* Divider */}
@@ -235,7 +237,9 @@ function App() {
                   <div className="bg-[#FFECF1] p-3 rounded-2xl flex items-center justify-center shrink-0">
                     <img src={item.icon} alt="" className="h-6 w-6" />
                   </div>
-                  <p className="text-base md:text-lg">{item.label}</p>
+                  <p className="text-base md:text-lg font-light">
+                    {item.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -304,7 +308,7 @@ function App() {
                 <div className="bg-[#FFECF1] p-3 rounded-2xl flex items-center justify-center shrink-0">
                   <img src={item.icon} alt="" className="h-6 w-6" />
                 </div>
-                <p className="text-sm md:text-base leading-snug">
+                <p className="text-base md:text-xl leading-snug font-light">
                   {item.label}
                 </p>
               </div>
@@ -361,6 +365,7 @@ function App() {
       <Footer contact={contact} />
 
       <div className="absolute w-360 h-110.75 rounded-full blur-[250px] md:-top-5 bg-[#FFEAD3]/60 -z-10" />
+      <div className="absolute w-360 h-110.75 rounded-full blur-[250px] top-580 md:top-120 bg-[#FFEAD3]/40 -z-10" />
       <div className="absolute w-360 h-110.75 rounded-full blur-[250px] top-580 md:top-280 bg-[#FFEAD3]/60 -z-10" />
       <div className="absolute w-360 h-110.75 rounded-full blur-[250px] top-840 -left-150 md:top-570 md:-left-150 bg-[#FFDBF6]/60 -z-10" />
       <div className="absolute w-360 h-110.75 rounded-full blur-[250px] top-1200 -right-100 md:top-720 md:-right-200 bg-[#FFEAD3]/60 -z-10" />

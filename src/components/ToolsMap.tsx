@@ -12,7 +12,9 @@ type Tools = {
 function ToolsMap({ arr, title, activeLink = false }: Tools) {
   return (
     <div>
-      <h2 className="text-[#9B9893] self-start pb-5 text-[16px]">{title}</h2>
+      <h2 className="text-[#9B9893] text-xs tracking-widest pb-5 self-start">
+        {title}
+      </h2>
       <div className="flex flex-row gap-3">
         {arr.map((item, i) => (
           <a

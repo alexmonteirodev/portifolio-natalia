@@ -13,7 +13,7 @@ const Coment = ({ text, link, linkLabel, position }: Coment) => {
     <div
       className={`border border-[#F1F1F0] py-5 px-4 flex flex-col  rounded-3xl ${linkLabel ? "gap-8" : "gap-2"}`}
     >
-      <div className="flex flex-col gap-1 items-start">
+      <div className="flex flex-col gap-3 items-start pb-14">
         <img src={aspas} alt="" className="h-6 w-auto" />
         <p className="text-xl font-light">{text}</p>
       </div>
@@ -21,7 +21,7 @@ const Coment = ({ text, link, linkLabel, position }: Coment) => {
         {linkLabel ? (
           <a
             href={link}
-            className="text-xl flex-row gap-2 items-center group inline-flex"
+            className="text-xl flex-row gap-2 items-center group inline-flex "
           >
             <h4>{linkLabel}</h4>
             <img

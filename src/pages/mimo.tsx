@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import mimoIcon from "../assets/png/mimo/mimoicon.png";
-import mimo1 from "../assets/png/mimo/mimo1.png";
-import mimo2 from "../assets/png/mimo/mimo2.png";
-import mimo3 from "../assets/png/mimo/mimo3.png";
-import mimo4 from "../assets/png/mimo/mimo4.png";
-import mimo5 from "../assets/png/mimo/mimo5.png";
+import mimoHero from "../assets/png/mimo/mimo-hero.png";
 import mimo6 from "../assets/png/mimo/mimo6.png";
 import mimo7 from "../assets/png/mimo/mimo7.png";
 import mimo8 from "../assets/png/mimo/mimo8.png";
@@ -46,6 +42,45 @@ const processSteps = [
     number: "04",
     title: "Test",
     text: "Usability testing with real users. Key adjustments were made to the wishlist flow and onboarding based on feedback, reducing friction in the moments that mattered most.",
+  },
+];
+
+const decision = [
+  {
+    number: 1,
+    title1: "WE CHOSE",
+    p1a: "A complete wishlist (proto, price, link)",
+    p1b: "Instead of a simplified version.",
+    title2: "WE GAINED",
+    p2a: "Immediate perceived value",
+    p2b: "Users see real value from the first interaction.",
+    title3: "WE SACRIFICED",
+    p3a: "Increased onboarding complexity",
+    p3b: "More information to understand for new users.",
+  },
+  {
+    number: 2,
+    title1: "WE CHOSE",
+    p1a: "Infinite scroll with automatic reordering",
+    p1b: "Instead of a calendar view.",
+    title2: "WE GAINED",
+    p2a: "Visual simplicity and focus",
+    p2b: "A cleaner, lighter experience that keeps users in flow.",
+    title3: "WE SACRIFICED",
+    p3a: "A clearer time-based overview",
+    p3b: "Users give up a calendar perspective to see upcoming events.",
+  },
+  {
+    number: 3,
+    title1: "WE CHOSE",
+    p1a: "To focus the MVP on core flows",
+    p1b: "And leave social features for future versions.",
+    title2: "WE GAINED",
+    p2a: "Faster time to market",
+    p2b: "We lauched sooner with a strong focused foundation.",
+    title3: "WE SACRIFICED",
+    p3a: "Initial viral potential",
+    p3b: "Social features could have driven more organic growth early on.",
   },
 ];
 
@@ -146,40 +181,7 @@ function Mimo() {
 
       {/* ── HERO GRID ── */}
       <section className="w-full rounded-3xl bg-white/85 px-6 md:px-10 pt-10 pb-10">
-        <div className="flex flex-col md:flex-row gap-6">
-          {/* Coluna esquerda */}
-          <div className="flex flex-col gap-6">
-            <img
-              src={mimo1}
-              alt=""
-              className="w-full md:w-auto md:h-62 object-contain rounded-xl"
-            />
-            <div className="flex gap-4 md:gap-0 md:justify-between">
-              <img
-                src={mimo2}
-                alt=""
-                className="w-1/2 md:w-94.25 h-48 md:h-92.5 object-contain rounded-xl"
-              />
-              <img
-                src={mimo3}
-                alt=""
-                className="w-1/2 md:w-75 h-48 md:h-92.5 object-contain rounded-xl"
-              />
-            </div>
-          </div>
-
-          {/* Coluna direita */}
-          <div className="flex flex-col gap-6">
-            <div className="w-full md:w-162.5 h-48 md:h-90 rounded-xl overflow-hidden">
-              <img src={mimo4} alt="" className="w-full h-full object-cover" />
-            </div>
-            <img
-              src={mimo5}
-              alt=""
-              className="w-full md:w-162.5 h-48 md:h-64 object-contain rounded-xl"
-            />
-          </div>
-        </div>
+        <img src={mimoHero} alt="" className="" />
       </section>
 
       {/* ── PROBLEM ── */}
@@ -188,7 +190,7 @@ function Mimo() {
           Problem
         </span>
 
-        <div className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-16">
+        <div className="flex flex-col  gap-6 ">
           <div className="md:w-[38%] shrink-0">
             <h2 className="text-2xl md:text-4xl font-normal leading-snug">
               What problem{" "}
@@ -197,7 +199,7 @@ function Mimo() {
               </span>
             </h2>
           </div>
-          <div className="flex flex-col gap-4 text-[#1A1814] text-base md:text-2xl leading-relaxed font-light flex-1 md:max-w-[650px]">
+          <div className="flex flex-col gap-4 text-[#1A1814] text-base md:text-2xl leading-relaxed font-light flex-1 ">
             <p>
               Birthdays used to live in planners. Today, they live in
               notification banners.
@@ -216,6 +218,70 @@ function Mimo() {
               app without it — and it ended up shaping the entire product
               direction.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── DECISION ── */}
+      <section className="w-full rounded-3xl bg-white/85 px-6 md:px-10 pt-10 pb-10 flex flex-col gap-8">
+        <span className="text-[#9B9893] tracking-widest text-xs uppercase">
+          Decision
+        </span>
+
+        <div className="flex flex-col gap-6 ">
+          <div className="md:w-[38%] shrink-0">
+            <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+              What were the{" "}
+              <span className="text-[#9B9893] italic font-light">
+                trade-offs?
+              </span>
+            </h2>
+          </div>
+          <div className="flex flex-col gap-4 text-[#1A1814] text-base md:text-2xl leading-relaxed font-light flex-1">
+            <p>
+              MOVA wasn’t designed to do everything from day one. It was
+              designed to solve the most painful workflows first.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {decision.map((item) => (
+              <div
+                key={item.number}
+                className="flex flex-col h-full gap-6 px-6 md:px-8 py-6 border border-black/6 rounded-3xl bg-white"
+              >
+                <p className="text-[#D4315D] bg-[#FFECF1] text-xl md:text-2xl px-5 py-3 rounded-2xl w-fit">
+                  {item.number}
+                </p>
+
+                <div className="flex flex-col gap-2">
+                  <p className="text-[#D4315D] text-sm md:text-base">
+                    {item.title1}
+                  </p>
+                  <p className="font-bold text-lg">{item.p1a}</p>
+                  <p className="text-neutral-700">{item.p1b}</p>
+                </div>
+
+                <hr className="border-[#F2F2F2]" />
+
+                <div className="flex flex-col gap-2">
+                  <p className="text-[#1E841E] text-sm md:text-base">
+                    {item.title2}
+                  </p>
+                  <p className="font-bold text-lg">{item.p2a}</p>
+                  <p className="text-neutral-700">{item.p2b}</p>
+                </div>
+
+                <hr className="border-[#F2F2F2]" />
+
+                <div className="flex flex-col gap-2">
+                  <p className="text-[#D43131] text-sm md:text-base">
+                    {item.title3}
+                  </p>
+                  <p className="font-bold text-lg">{item.p3a}</p>
+                  <p className="text-neutral-700">{item.p3b}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -301,11 +367,9 @@ function Mimo() {
           </p>
         </div>
 
-        <img
-          src={mimo8}
-          alt=""
-          className="w-full h-64 md:h-[420px] object-cover rounded-2xl"
-        />
+        <video autoPlay muted loop playsInline className="w-full rounded-3xl">
+          <source src="/videos/video-mimo.mov" type="video/mp4" />
+        </video>
       </section>
 
       {/* ── LEARNINGS ── */}
