@@ -23,7 +23,7 @@ const Coment = ({ text, link, linkLabel, position }: Coment) => {
             href={link}
             className="text-xl flex-row gap-2 items-center group inline-flex "
           >
-            <h4>{linkLabel}</h4>
+            <h4 className="font-instrument">{linkLabel}</h4>
             <img
               src={arrow}
               alt=""

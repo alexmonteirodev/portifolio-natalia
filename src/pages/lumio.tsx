@@ -49,7 +49,7 @@ function Lumio() {
   }, []);
 
   return (
-    <div className="p-4 md:p-8 flex flex-col items-center gap-4 md:gap-5">
+    <div className="p-4 md:py-8 md:px-14 flex flex-col items-center gap-4 md:gap-5">
       {/* ── HEADER ── */}
       <section className="w-full rounded-3xl bg-white/85 px-6 md:px-10 pt-8 pb-10 flex flex-col gap-8">
         <Link
@@ -109,33 +109,34 @@ function Lumio() {
             </div>
           </div>
 
-          {/* Right: description */}
-          <p className="text-lg md:text-2xl text-[#1A1814] leading-relaxed md:max-w-[650px] font-light">
-            Most devotional apps feel like homework. Lumio was built to feel
-            like a conversation, one that starts with how you're actually
-            feeling. Every day begins with your mood, and from there, Lumio
-            guides you to a verse, a chapter, and a space to write whatever's on
-            your mind.
-          </p>
-        </div>
-
-        {/* Role / Platform / Tools */}
-        <div className="flex flex-wrap gap-3 md:gap-10 md:self-end">
-          {[
-            { label: "Role", value: "UX/UI Designer" },
-            { label: "Platform", value: "Mobile · iOS" },
-            { label: "Tools", value: "Figma · Figma Jam" },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="flex flex-col gap-1 border border-[#F1F1F0] rounded-xl px-4 py-4 md:py-5"
-            >
-              <span className="text-[#9B9893] tracking-widest text-xs uppercase">
-                {item.label}
-              </span>
-              <span className="text-sm text-[#1A1A1A]">{item.value}</span>
+          <div>
+            {/* Right: description */}
+            <p className="text-lg md:text-2xl text-[#1A1814] leading-relaxed md:max-w-[650px] font-light">
+              Most devotional apps feel like homework. Lumio was built to feel
+              like a conversation, one that starts with how you're actually
+              feeling. Every day begins with your mood, and from there, Lumio
+              guides you to a verse, a chapter, and a space to write whatever's
+              on your mind.
+            </p>
+            {/* Role / Platform / Tools */}
+            <div className="flex flex-wrap gap-3 items-center justify-between pt-10">
+              {[
+                { label: "Role", value: "UX/UI Designer" },
+                { label: "Platform", value: "Mobile · iOS" },
+                { label: "Tools", value: "Figma · Figma Jam" },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="flex flex-col gap-1 border border-[#F1F1F0] rounded-xl px-5 py-4 md:py-5"
+                >
+                  <span className="text-[#9B9893] tracking-widest text-[16px] uppercase">
+                    {item.label}
+                  </span>
+                  <span className="text-xl font-light">{item.value}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -167,25 +168,6 @@ function Lumio() {
               different: a daily spiritual experience that starts with the user,
               not with a pre-set plan.
             </p>
-            {/* <p>
-              Technical: trainers needed free-form notes, periodization control,
-              load progression tracking, and full student history in one place.
-            </p>
-            <p>
-              Operational: no macro view of the business. No way to know who
-              evolved, who needed attention, or what was happening across their
-              entire client base.
-            </p>
-            <p>
-              Financial: the most critical discovery. Trainers were losing
-              revenue without realizing it: no renewal tracking, no income
-              overview, money slipping through manual gaps.
-            </p>
-            <p>
-              The insight that reframed everything: the real problem wasn't
-              managing workouts, it was running a business with no
-              infrastructure for it.
-            </p> */}
           </div>
         </div>
       </section>
@@ -265,12 +247,12 @@ function Lumio() {
           <img
             src={lumio6}
             alt=""
-            className="w-full h-56 md:h-80 object-cover rounded-2xl"
+            className="md:h-115 md:w-2xl object-contain rounded-2xl"
           />
           <img
             src={lumio7}
             alt=""
-            className="w-full h-56 md:h-80 object-cover rounded-2xl"
+            className="md:h-115 md:w-2xl object-contain rounded-2xl"
           />
         </div>
       </section>
@@ -351,12 +333,12 @@ function Lumio() {
           <img
             src={lumio9}
             alt=""
-            className="w-full h-44 md:h-64 object-cover rounded-2xl"
+            className="w-full h-44 md:h-64 md:object-contain object-cover rounded-2xl"
           />
           <img
             src={lumio10}
             alt=""
-            className="w-full h-44 md:h-64 object-cover rounded-2xl"
+            className="w-full h-44 md:h-64 md:object-contain object-cover rounded-2xl"
           />
           {/* <img
             src={lumio11}

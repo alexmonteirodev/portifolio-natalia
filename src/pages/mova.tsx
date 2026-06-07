@@ -91,7 +91,7 @@ function Mova() {
   }, []);
 
   return (
-    <div className="p-4 md:p-8 flex flex-col items-center gap-4 md:gap-5">
+    <div className="p-4 md:py-8 md:px-14 flex flex-col items-center gap-4 md:gap-5 ">
       {/* ── HEADER ── */}
       <section className="w-full rounded-3xl bg-white/85 px-6 md:px-10 pt-8 pb-10 flex flex-col gap-8">
         <Link
@@ -151,32 +151,35 @@ function Mova() {
             </div>
           </div>
 
-          {/* Right: description */}
-          <p className="text-lg md:text-2xl text-[#1A1814] leading-relaxed md:max-w-[650px] font-light">
-            Personal trainers are entrepreneurs. But most are running their
-            business on WhatsApp, spreadsheets, and memory. Mova was built to
-            change that a complete management platform where trainers handle
-            students, workouts, payments, and business growth, all in one place.
-          </p>
-        </div>
+          <div>
+            {/* Right: description */}
+            <p className="text-lg md:text-2xl text-[#1A1814] leading-relaxed md:max-w-[650px] font-light">
+              Personal trainers are entrepreneurs. But most are running their
+              business on WhatsApp, spreadsheets, and memory. Mova was built to
+              change that a complete management platform where trainers handle
+              students, workouts, payments, and business growth, all in one
+              place.
+            </p>
 
-        {/* Role / Platform / Tools */}
-        <div className="flex flex-wrap gap-3 md:gap-10 md:self-end">
-          {[
-            { label: "Role", value: "UX/UI Designer" },
-            { label: "Platform", value: "Web · Mobile" },
-            { label: "Tools", value: "Figma · Figma Jam" },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="flex flex-col gap-1 border border-[#F1F1F0] rounded-xl px-4 py-4 md:py-5"
-            >
-              <span className="text-[#9B9893] tracking-widest text-xs uppercase">
-                {item.label}
-              </span>
-              <span className="text-sm text-[#1A1A1A]">{item.value}</span>
+            {/* Role / Platform / Tools */}
+            <div className="flex flex-wrap gap-3 items-center justify-between pt-10">
+              {[
+                { label: "Role", value: "UX/UI Designer" },
+                { label: "Platform", value: "Web · Mobile" },
+                { label: "Tools", value: "Figma · Figma Jam" },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="flex flex-col gap-1 border border-[#F1F1F0] rounded-xl px-5 py-4 md:py-5"
+                >
+                  <span className="text-[#9B9893] tracking-widest text-[16px] uppercase">
+                    {item.label}
+                  </span>
+                  <span className="text-xl font-light">{item.value}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -328,12 +331,12 @@ function Mova() {
           <img
             src={mova6}
             alt=""
-            className="w-full h-56 md:h-80 object-cover rounded-2xl"
+            className="md:h-115 md:w-2xl object-contain rounded-2xl"
           />
           <img
             src={mova7}
             alt=""
-            className="w-full h-56 md:h-80 object-cover rounded-2xl"
+            className="md:h-115 md:w-2xl object-contain rounded-2xl"
           />
         </div>
       </section>
@@ -412,22 +415,22 @@ function Mova() {
           <img
             src={mova9}
             alt=""
-            className="w-full h-44 md:h-64 object-cover rounded-2xl"
+            className="w-full h-44 md:h-64 md:object-contain object-cover rounded-2xl"
           />
           <img
             src={mova10}
             alt=""
-            className="w-full h-44 md:h-64 object-cover rounded-2xl"
+            className="w-full h-44 md:h-64 md:object-contain object-cover rounded-2xl"
           />
           <img
             src={mova11}
             alt=""
-            className="w-full h-44 md:h-64 object-cover rounded-2xl"
+            className="w-full h-44 md:h-64 md:object-contain object-cover rounded-2xl"
           />
           <img
             src={mova12}
             alt=""
-            className="w-full h-44 md:h-64 object-cover rounded-2xl"
+            className="w-full h-44 md:h-64 md:object-contain object-cover rounded-2xl"
           />
         </div>
       </section>

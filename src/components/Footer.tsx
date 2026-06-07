@@ -13,7 +13,7 @@ type FooterPros = {
 const Footer = ({ contact }: FooterPros) => {
   return (
     <section className="w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-10 pt-14 pb-10 flex flex-col items-center gap-5 relative">
-      <h1 className="text-3xl md:text-5xl text-center">
+      <h1 className="text-3xl md:text-5xl text-center font-instrument">
         Open to new opportunities
       </h1>
       <p className="text-base md:text-lg text-[#9B9893] font-light">

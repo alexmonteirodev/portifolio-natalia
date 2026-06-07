@@ -92,7 +92,7 @@ function App() {
       <section className="relative overflow-hidden w-full rounded-3xl border border-[#F1F1F0] bg-white/85 px-8 md:px-12 py-10 md:py-18 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Text */}
         <div className="flex flex-col gap-6 order-2 md:order-1 z-10">
-          <h1 className="text-4xl md:text-5xl text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl text-center md:text-left font-instrument">
             I'm Natália Lopes
           </h1>
           <div className="text-[#6B6760] text-base md:text-lg font-light md:max-w-130 text-center md:text-left flex flex-col gap-4">

@@ -90,7 +90,7 @@ function Mimo() {
   }, []);
 
   return (
-    <div className="p-4 md:p-8 flex flex-col items-center gap-4 md:gap-5">
+    <div className="p-4 md:py-8 md:px-14 flex flex-col items-center gap-4 md:gap-5">
       {/* ── HEADER ── */}
       <section className="w-full rounded-3xl bg-white/85 px-6 md:px-10 pt-8 pb-10 flex flex-col gap-8">
         <Link
@@ -150,32 +150,33 @@ function Mimo() {
             </div>
           </div>
 
-          {/* Right: description */}
-          <p className="text-lg md:text-2xl text-[#1A1814] leading-relaxed md:max-w-[650px] font-light">
-            We stopped writing birthdays in planners. We started relying on
-            social media. Mimo was built to bring that care back — a mobile app
-            where you track birthdays, create wishlists, and actually show up
-            for the people you love.
-          </p>
-        </div>
-
-        {/* Role / Platform / Tools */}
-        <div className="flex flex-wrap gap-3 md:gap-10 md:self-end">
-          {[
-            { label: "Role", value: "UX/UI Designer" },
-            { label: "Platform", value: "Mobile · iOS" },
-            { label: "Tools", value: "Figma · Figma Jam" },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="flex flex-col gap-1 border border-[#F1F1F0] rounded-xl px-4 py-4 md:py-5"
-            >
-              <span className="text-[#9B9893] tracking-widest text-xs uppercase">
-                {item.label}
-              </span>
-              <span className="text-sm text-[#1A1A1A]">{item.value}</span>
+          <div>
+            {/* Right: description */}
+            <p className="text-lg md:text-2xl text-[#1A1814] leading-relaxed md:max-w-[650px] font-light">
+              We stopped writing birthdays in planners. We started relying on
+              social media. Mimo was built to bring that care back — a mobile
+              app where you track birthdays, create wishlists, and actually show
+              up for the people you love.
+            </p>
+            {/* Role / Platform / Tools */}
+            <div className="flex flex-wrap gap-3 items-center justify-between pt-10">
+              {[
+                { label: "Role", value: "UX/UI Designer" },
+                { label: "Platform", value: "Mobile · iOS" },
+                { label: "Tools", value: "Figma · Figma Jam" },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="flex flex-col gap-1 border border-[#F1F1F0] rounded-xl px-5 py-4 md:py-5"
+                >
+                  <span className="text-[#9B9893] tracking-widest text-[16px] uppercase">
+                    {item.label}
+                  </span>
+                  <span className="text-xl font-light">{item.value}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -321,12 +322,12 @@ function Mimo() {
           <img
             src={mimo6}
             alt=""
-            className="w-full h-56 md:h-80 object-cover rounded-2xl"
+            className="md:h-115 md:w-2xl object-contain rounded-2xl"
           />
           <img
             src={mimo7}
             alt=""
-            className="w-full h-56 md:h-80 object-cover rounded-2xl"
+            className="md:h-115 md:w-2xl object-contain rounded-2xl"
           />
         </div>
       </section>
@@ -398,22 +399,22 @@ function Mimo() {
           <img
             src={mimo9}
             alt=""
-            className="w-full h-44 md:h-64 object-cover rounded-2xl"
+            className="w-full h-44 md:h-64 md:object-contain object-cover rounded-2xl"
           />
           <img
             src={mimo10}
             alt=""
-            className="w-full h-44 md:h-64 object-cover rounded-2xl"
+            className="w-full h-44 md:h-64 md:object-contain object-cover rounded-2xl"
           />
           <img
             src={mimo11}
             alt=""
-            className="w-full h-44 md:h-64 object-cover rounded-2xl"
+            className="w-full h-44 md:h-64 md:object-contain object-cover rounded-2xl"
           />
           <img
             src={mimo12}
             alt=""
-            className="w-full h-44 md:h-64 object-cover rounded-2xl"
+            className="w-full h-44 md:h-64 md:object-contain object-cover rounded-2xl"
           />
         </div>
       </section>
