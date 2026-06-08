@@ -11,7 +11,7 @@ type Coment = {
 const Coment = ({ text, link, linkLabel, position }: Coment) => {
   return (
     <div
-      className={`border border-[#F1F1F0] py-5 px-4 flex flex-col  rounded-3xl ${linkLabel ? "gap-8" : "gap-2"}`}
+      className={`border border-[#F1F1F0] py-5 px-4 flex flex-col rounded-3xl ${linkLabel ? "md:gap-8" : "gap-2"}`}
     >
       <div className="flex flex-col gap-3 items-start pb-14">
         <img src={aspas} alt="" className="h-6 w-auto" />

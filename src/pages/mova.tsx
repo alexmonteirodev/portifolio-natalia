@@ -91,7 +91,7 @@ function Mova() {
   }, []);
 
   return (
-    <div className="p-4 md:py-8 md:px-14 flex flex-col items-center gap-4 md:gap-5 ">
+    <div className="p-4 md:py-8 md:px-24 flex flex-col items-center gap-4 md:gap-5 ">
       {/* ── HEADER ── */}
       <section className="w-full rounded-3xl bg-white/85 px-6 md:px-10 pt-8 pb-10 flex flex-col gap-8">
         <Link
@@ -162,7 +162,7 @@ function Mova() {
             </p>
 
             {/* Role / Platform / Tools */}
-            <div className="flex flex-wrap gap-3 items-center justify-between pt-10">
+            <div className="flex flex-col md:flex-row gap-3 items-start md:items-center justify-between pt-10">
               {[
                 { label: "Role", value: "UX/UI Designer" },
                 { label: "Platform", value: "Web · Mobile" },
@@ -172,10 +172,10 @@ function Mova() {
                   key={item.label}
                   className="flex flex-col gap-1 border border-[#F1F1F0] rounded-xl px-5 py-4 md:py-5"
                 >
-                  <span className="text-[#9B9893] tracking-widest text-[16px] uppercase">
+                  <span className="text-[#9B9893] tracking-widest md:text-[16px] text-[12px] uppercase font-light">
                     {item.label}
                   </span>
-                  <span className="text-xl font-light">{item.value}</span>
+                  <span className="md:text-xl font-light">{item.value}</span>
                 </div>
               ))}
             </div>
@@ -196,7 +196,7 @@ function Mova() {
 
         <div className="flex flex-col gap-6 ">
           <div className="md:w-[38%] shrink-0">
-            <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+            <h2 className="text-2xl md:text-4xl font-normal leading-snug font-instrument md:w-162.5">
               What problem{" "}
               <span className="text-[#9B9893] italic font-light">
                 were we solving?
@@ -239,7 +239,7 @@ function Mova() {
 
         <div className="flex flex-col gap-6 ">
           <div className="md:w-[38%] shrink-0">
-            <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+            <h2 className="text-2xl md:text-4xl font-normal leading-snug font-instrument">
               What were the{" "}
               <span className="text-[#9B9893] italic font-light">
                 trade-offs?
@@ -266,7 +266,7 @@ function Mova() {
                   <p className="text-[#D4315D] text-sm md:text-base">
                     {item.title1}
                   </p>
-                  <p className="font-bold text-lg">{item.p1a}</p>
+                  <p className="font-medium text-lg">{item.p1a}</p>
                   <p className="text-neutral-700">{item.p1b}</p>
                 </div>
 
@@ -276,7 +276,7 @@ function Mova() {
                   <p className="text-[#1E841E] text-sm md:text-base">
                     {item.title2}
                   </p>
-                  <p className="font-bold text-lg">{item.p2a}</p>
+                  <p className="font-medium text-lg">{item.p2a}</p>
                   <p className="text-neutral-700">{item.p2b}</p>
                 </div>
 
@@ -286,7 +286,7 @@ function Mova() {
                   <p className="text-[#D43131] text-sm md:text-base">
                     {item.title3}
                   </p>
-                  <p className="font-bold text-lg">{item.p3a}</p>
+                  <p className="font-medium text-lg">{item.p3a}</p>
                   <p className="text-neutral-700">{item.p3b}</p>
                 </div>
               </div>
@@ -302,7 +302,7 @@ function Mova() {
           Process
         </span>
 
-        <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+        <h2 className="text-2xl md:text-4xl font-normal leading-snug font-instrument">
           How did{" "}
           <span className="text-[#9B9893] italic font-light">
             we get there?
@@ -316,7 +316,7 @@ function Mova() {
                 {step.number}
               </span>
               <div className="flex flex-col gap-2">
-                <p className="text-lg md:text-2xl font-semibold text-[#1A1814]">
+                <p className="text-lg md:text-2xl text-[#1A1814]">
                   {step.title}
                 </p>
                 <p className="text-base md:text-2xl text-[#1A1814] leading-relaxed font-light">
@@ -347,7 +347,7 @@ function Mova() {
           Solution
         </span>
 
-        <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+        <h2 className="text-2xl md:text-4xl font-normal leading-snug font-instrument">
           What{" "}
           <span className="text-[#9B9893] italic font-light">we built</span>
         </h2>
@@ -390,7 +390,7 @@ function Mova() {
           Learnings
         </span>
 
-        <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+        <h2 className="text-2xl md:text-4xl font-normal leading-snug font-instrument">
           What{" "}
           <span className="text-[#9B9893] italic font-light">
             I took from this

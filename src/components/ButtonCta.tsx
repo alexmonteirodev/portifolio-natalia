@@ -4,7 +4,7 @@ function ButtonCta() {
   return (
     <a
       href="mailto:natalialopes.mja@gmail.com"
-      className="group inline-flex items-center justify-center gap-2 rounded-3xl bg-black px-19.25 py-5.5 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-black/90"
+      className="group inline-flex items-center justify-center gap-2 rounded-3xl bg-black px-12 md:px-19.25 py-5.5 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-black/90"
     >
       <p>Say hello</p>
       <img

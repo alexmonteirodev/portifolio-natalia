@@ -16,7 +16,7 @@ const Footer = ({ contact }: FooterPros) => {
       <h1 className="text-3xl md:text-5xl text-center font-instrument">
         Open to new opportunities
       </h1>
-      <p className="text-base md:text-lg text-[#9B9893] font-light">
+      <p className="text-base md:text-lg text-[#9B9893] font-light text-center">
         Reach me at{" "}
         <a
           href="mailto:natalialopes.mja@gmail.com"

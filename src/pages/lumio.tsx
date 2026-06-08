@@ -119,7 +119,7 @@ function Lumio() {
               on your mind.
             </p>
             {/* Role / Platform / Tools */}
-            <div className="flex flex-wrap gap-3 items-center justify-between pt-10">
+            <div className="flex flex-col md:flex-row gap-3 items-start md:items-center justify-between pt-10">
               {[
                 { label: "Role", value: "UX/UI Designer" },
                 { label: "Platform", value: "Mobile · iOS" },
@@ -129,10 +129,10 @@ function Lumio() {
                   key={item.label}
                   className="flex flex-col gap-1 border border-[#F1F1F0] rounded-xl px-5 py-4 md:py-5"
                 >
-                  <span className="text-[#9B9893] tracking-widest text-[16px] uppercase">
+                  <span className="text-[#9B9893] tracking-widest md:text-[16px] text-[12px] uppercase font-light">
                     {item.label}
                   </span>
-                  <span className="text-xl font-light">{item.value}</span>
+                  <span className="md:text-xl font-light">{item.value}</span>
                 </div>
               ))}
             </div>
@@ -153,7 +153,7 @@ function Lumio() {
 
         <div className="flex flex-col  gap-6 ">
           <div className="md:w-[38%] shrink-0">
-            <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+            <h2 className="text-2xl md:text-4xl font-normal leading-snug font-instrument">
               What problem{" "}
               <span className="text-[#9B9893] italic font-light">
                 were we solving?
@@ -180,7 +180,7 @@ function Lumio() {
 
         <div className="flex flex-col  gap-6 ">
           <div className="md:w-[38%] shrink-0">
-            <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+            <h2 className="text-2xl md:text-4xl font-normal leading-snug font-instrument">
               What problem{" "}
               <span className="text-[#9B9893] italic font-light">
                 trade-offs?
@@ -218,7 +218,7 @@ function Lumio() {
           Process
         </span>
 
-        <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+        <h2 className="text-2xl md:text-4xl font-normal leading-snug font-instrument">
           How did{" "}
           <span className="text-[#9B9893] italic font-light">
             we get there?
@@ -232,7 +232,7 @@ function Lumio() {
                 {step.number}
               </span>
               <div className="flex flex-col gap-2">
-                <p className="text-lg md:text-2xl font-semibold text-[#1A1814]">
+                <p className="text-lg md:text-2xl text-[#1A1814]">
                   {step.title}
                 </p>
                 <p className="text-base md:text-2xl text-[#1A1814] leading-relaxed font-light">
@@ -263,7 +263,7 @@ function Lumio() {
           Solution
         </span>
 
-        <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+        <h2 className="text-2xl md:text-4xl font-normal leading-snug font-instrument">
           What{" "}
           <span className="text-[#9B9893] italic font-light">we built</span>
         </h2>
@@ -308,7 +308,7 @@ function Lumio() {
           Learnings
         </span>
 
-        <h2 className="text-2xl md:text-4xl font-normal leading-snug">
+        <h2 className="text-2xl md:text-4xl font-normal leading-snug font-instrument">
           What{" "}
           <span className="text-[#9B9893] italic font-light">
             I took from this

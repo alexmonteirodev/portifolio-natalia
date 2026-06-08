@@ -302,7 +302,7 @@ function App() {
           </h2>
 
           {/* Hobbies grid */}
-          <div className="grid grid-cols-3 gap-x-4 gap-y-5">
+          <div className="grid md:grid-cols-3 grid-cols-2 gap-x-4 gap-y-5">
             {beyondthescreen.map((item, i) => (
               <div key={i} className="flex items-center gap-3">
                 <div className="bg-[#FFECF1] p-3 rounded-2xl flex items-center justify-center shrink-0">
@@ -324,17 +324,19 @@ function App() {
           />
 
           {/* Photos + map */}
-          <div className="flex gap-3">
-            <img
-              src={brasil}
-              alt="Brasil"
-              className="w-28 h-28 md:w-32 md:h-32 object-cover rounded-2xl shrink-0"
-            />
-            <img
-              src={madrid}
-              alt="Madrid"
-              className="w-28 h-28 md:w-32 md:h-32 object-cover rounded-2xl shrink-0"
-            />
+          <div className="flex md:flex-row flex-col gap-3">
+            <div className="flex gap-3 items-center justify-center">
+              <img
+                src={brasil}
+                alt="Brasil"
+                className="w-36 h-36 md:w-32 md:h-32 object-cover rounded-2xl shrink-0"
+              />
+              <img
+                src={madrid}
+                alt="Madrid"
+                className="w-36 h-36 md:w-32 md:h-32 object-cover rounded-2xl shrink-0"
+              />
+            </div>
             <div className="relative flex-1 min-w-0">
               <img
                 src={madridMap}
