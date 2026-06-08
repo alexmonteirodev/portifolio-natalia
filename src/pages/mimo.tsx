@@ -3,7 +3,6 @@ import mimoIcon from "../assets/png/mimo/mimoicon.png";
 import mimoHero from "../assets/png/mimo/mimo-hero.png";
 import mimo6 from "../assets/png/mimo/mimo6.png";
 import mimo7 from "../assets/png/mimo/mimo7.png";
-import mimo8 from "../assets/png/mimo/mimo8.png";
 import mimo9 from "../assets/png/mimo/mimo9.png";
 import mimo10 from "../assets/png/mimo/mimo10.png";
 import mimo11 from "../assets/png/mimo/mimo11.png";
